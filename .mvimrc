@@ -1,0 +1,4 @@
+" set guifont=Fira\ Code:h12
+set guifont=Hack_Nerd_Font_Mono:h11
+set cursorline
+set macligatures

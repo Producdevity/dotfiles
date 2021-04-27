@@ -1,0 +1,75 @@
+" use native clipboard
+"
+set clipboard+=unnamed
+
+" set clipboard+=ideaput
+
+" join via the IDE.
+set ideajoin
+
+" don't facking BEEP
+set vb
+
+" use vim-surround plugin
+set surround
+
+" enable multiple cursors
+set multiple-cursors
+
+" highlight matches with last search pattern
+set hlsearch
+
+" no ignore case when pattern has uppercase
+set smartcase
+
+" ignore case in search patterns
+set ignorecase
+
+" set leader to space
+nmap <space> <leader>
+
+" no highlight search
+nmap <leader>m :noh<CR>
+
+" Add a semicolon to end of line when pressing ;
+nmap <C-;> A;<Esc>
+" Add a comma to end of line when pressing ,
+nmap <C-,> A,<Esc>
+
+" split lines with shift-k
+nmap K i<CR><Esc>
+
+" close and save
+nmap <leader>x :x<CR>
+
+" write file
+nmap <leader>w :w<CR>
+
+" write all files
+nmap <leader>wa :wa<CR>
+
+" to to end of line and delete char <C-l>
+noremap ∂ <Esc>$x<Esc>
+
+" refresh .ideavimrc
+nmap <silent> <leader>sv :source ~/.ideavimrc<CR>
+
+
+" Insert mode
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-l> <Right>
+inoremap <C-h> <Left>
+
+" Smoothscroll
+map <C-u> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
+
+map <C-d> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+
+" New line without going insert mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
+" Start from bottom part of comment to select the full comment
+nmap <C-5> %v%
+
