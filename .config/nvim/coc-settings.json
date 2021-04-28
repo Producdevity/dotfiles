@@ -1,0 +1,14 @@
+{
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+    "prettier.trailingComma": "all",
+    "tsserver.formatOnType": true,
+    "coc.preferences.formatOnType": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.filetypes": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ]
+}
