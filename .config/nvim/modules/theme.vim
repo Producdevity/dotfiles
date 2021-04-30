@@ -5,7 +5,6 @@ endif
 
 " Theme
 syntax enable
-" colorscheme tender
 colorscheme gruvbox
 set background=dark
 

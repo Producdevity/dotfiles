@@ -8,7 +8,7 @@ nnoremap <D-1> :NERDTreeToggle<CR>
 "Find current file in nerdtree
 noremap <leader><leader>f :NERDTreeFind<CR>
 
-" NERDTreeFindToggle
+" NERDTreeFindToggle (set in iTerm to call NERDTreeFindToggle())
 function NERDTreeFindToggle()
     if g:NERDTree.IsOpen()
         :NERDTreeClose

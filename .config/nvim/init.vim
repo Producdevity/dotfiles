@@ -16,3 +16,5 @@ source $HOME/.config/nvim/modules/nerdtree.vim
 
 " Automatically removing all trailing whitespace
 " autocmd BufWritePre * %s/\s\+$//e
+
+" let g:smoothie_enabled = 0

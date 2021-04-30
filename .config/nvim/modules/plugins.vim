@@ -1,7 +1,6 @@
  " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall
 endif
 
@@ -14,10 +13,8 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'tomtom/tcomment_vim'                                                 " Easy commenting
 
     " UI
-    Plug 'mhinz/vim-startify'                                                  " The fancy start screen for Vim
     Plug 'bling/vim-airline'                                                   " Airline
     Plug 'vim-airline/vim-airline-themes'                                      " Airline themes
-    Plug 'jacoborus/tender.vim'                                                " Color Scheme
     Plug 'morhetz/gruvbox'                                                     " Color Scheme
     Plug 'roman/golden-ratio'                                                  " Automatically resizing windows
     Plug 'psliwka/vim-smoothie'                                                " Smooth Scrolling
