@@ -59,6 +59,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(wakatime git gitfast composer laravel5 node yarn npm vi-mode sudo osx z zsh-autosuggestions zsh-syntax-highlighting command-not-found)
 plugins=(wakatime git gitfast node yarn npm vi-mode sudo osx z zsh-autosuggestions zsh-syntax-highlighting)
+# plugins=(wakatime git gitfast node yarn npm zsh-vi-mode sudo osx z zsh-autosuggestions zsh-syntax-highlighting)
 
 # load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
