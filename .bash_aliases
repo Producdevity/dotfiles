@@ -121,6 +121,7 @@ alias glg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 alias delete_ds_store='find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch '
 alias gitdf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gitd='gitdf '
+alias gitda='gitdf add'
 alias gitds='gitdf status'
 alias gitdd='gitdf diff'
 alias gitdc='gitdf commit -m'
