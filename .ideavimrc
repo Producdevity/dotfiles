@@ -48,7 +48,7 @@ nmap <leader>w :w<CR>
 " write all files
 nmap <leader>wa :wa<CR>
 
-" to to end of line and delete char <C-l>
+" go to end of line and delete char <C-l>
 noremap ∂ <Esc>$x<Esc>
 
 " refresh .ideavimrc
