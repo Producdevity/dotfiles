@@ -1,8 +1,9 @@
 " use native clipboard
-"
-set clipboard+=unnamed
+"set clipboard+=unnamed
+set clipboard+=ideaput
 
-" set clipboard+=ideaput
+" Show the current VIM mode
+set showmode
 
 " join via the IDE.
 set ideajoin
@@ -31,13 +32,16 @@ nmap <space> <leader>
 " no highlight search
 nmap <leader>m :noh<CR>
 
-" Add a semicolon to end of line when pressing ;
+" Add a semicolon to end of line
 nmap <C-;> A;<Esc>
-" Add a comma to end of line when pressing ,
+" Add a comma to end of line
 nmap <C-,> A,<Esc>
 
 " split lines with shift-k
 nmap K i<CR><Esc>
+
+" Toggle relative line numbers
+nmap <leader>n :set rnu!<CR> :set nu!<CR>
 
 " close and save
 nmap <leader>x :x<CR>
@@ -54,17 +58,11 @@ noremap <C-l> <Esc>$x<Esc>
 " refresh .ideavimrc
 nmap <silent> <leader>sv :source ~/.ideavimrc<CR>
 
-
 " Insert mode
 inoremap <C-k> <Up>
 inoremap <C-j> <Down>
 inoremap <C-l> <Right>
 inoremap <C-h> <Left>
-
-" Smoothscroll
-map <C-u> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
-
-map <C-d> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
 
 " New line without going insert mode
 nmap <S-Enter> O<Esc>
@@ -73,3 +71,19 @@ nmap <CR> o<Esc>
 " Start from bottom part of comment to select the full comment
 nmap <C-5> %v%
 
+" sethandler Config"
+sethandler <S-CR> a:vim
+sethandler <C-2> a:vim
+sethandler <C-5> a:vim
+sethandler <C-D> a:vim
+sethandler <C-F> a:ide
+sethandler <C-G> a:vim
+sethandler <C-H> a:vim
+sethandler <C-I> a:ide
+sethandler <C-L> a:vim
+sethandler <C-N> a:vim
+sethandler <C-O> a:ide
+sethandler <C-P> a:vim
+sethandler <C-Q> a:ide
+sethandler <C-T> a:vim
+sethandler <C-V> a:vim
