@@ -1,6 +1,6 @@
 " use native clipboard
-"set clipboard+=unnamed
-set clipboard+=ideaput
+set clipboard+=unnamed
+"set clipboard+=ideaput
 
 " Show the current VIM mode
 set showmode
