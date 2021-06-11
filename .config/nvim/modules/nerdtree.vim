@@ -1,5 +1,5 @@
-let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '\.git$[[dir]]', '\.idea$[[dir]]', '\.sass-cache$'] " Hide certain files and directories from NERDTree
-let g:NERDTreeShowHidden = 1                                                                          " Show hidden files/directories
+let g:NERDTreeIgnore = ['^node_modules$', '^\.DS_Store$', '^tags$', '\.git$[[dir]]', '\.idea$[[dir]]', '\.sass-cache$'] " Hide certain files and directories from NERDTree
+let g:NERDTreeShowHidden = 1                                                                                            " Show hidden files/directories
 
 " Toggle Nerdtree
 noremap <leader><leader>n :NERDTreeToggle<CR>
