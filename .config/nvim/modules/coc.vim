@@ -5,6 +5,7 @@ let g:coc_global_extensions = [
     \'coc-vimlsp',
     \'coc-html',
     \'coc-html-css-support',
+    \'coc-json',
     \'coc-tsserver',
     \'coc-eslint',
     \'coc-tslint',

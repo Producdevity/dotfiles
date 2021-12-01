@@ -69,7 +69,7 @@ endif
 
 if exists('+colorcolumn')
   " Highlight up to 255 columns (this is the current Vim max) beyond 'textwidth'
-  " let &l:colorcolumn='+' . join(range(0, 254), ',+')
+  let &l:colorcolumn='+' . join(range(0, 254), ',+')
 endif
 
 set redrawtime=1000

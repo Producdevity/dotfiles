@@ -3,7 +3,7 @@
   "prettier.semi": false,
   "prettier.trailingComma": "all",
   "tsserver.formatOnType": true,
-  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnType": false,
   "eslint.autoFixOnSave": true,
   "eslint.probe": [
     "javascript",

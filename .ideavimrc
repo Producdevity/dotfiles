@@ -1,6 +1,5 @@
-" use native clipboard
+" use native clipboard (unnamed | ideaput)
 set clipboard+=unnamed
-"set clipboard+=ideaput
 
 " Show the current VIM mode
 set showmode
@@ -10,6 +9,9 @@ set ideajoin
 
 " don't facking BEEP
 set vb
+
+" don't touch top or bottom of the page
+set scrolloff=8
 
 " use vim-surround plugin
 set surround
