@@ -15,7 +15,8 @@ let g:coc_global_extensions = [
     \'coc-git',
     \'coc-prettier',
     \'coc-emmet',
-    \'coc-pairs'
+    \'coc-pairs',
+    \'coc-yaml'
     \]
 
 
