@@ -17,6 +17,8 @@ alias tcp='cdtcp && panw'
 alias ll='ls -alhF '
 alias l='ls -FGlAhp '
 alias la='ls -A '
+alias llf='ls -alhF | grep "^-" ' # list only files using grep
+alias lld='ls -alhF | grep "^d" ' # list only dirs using grep
 alias lsdir='ls -dl */ ' # list only dirs
 
 # navigate
@@ -171,7 +173,6 @@ alias setyarnregistry="yarn config set registry https://registry.yarnpkg.com"
 alias setnpmregistry="npm config set registry https://registry.npmjs.org"
 
 # Handy stuff
-alias lspas='lsof -i :8000'
 alias rm='rm -i '
 
 # Composer
@@ -238,10 +239,10 @@ alias cp_prettierrc='cp ~/lib/.prettierrc_defaults ./.prettierrc'
 
 
 #ANDROID
-alias lsd='adb devices'
+alias lsd='adb devices' # list android devices
 
 #iOS
-alias lsios='xcrun instruments -s devices '
+alias lsios='xcrun instruments -s devices ' # list ios devices
 
 
 #DEFAULTS
