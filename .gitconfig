@@ -1,0 +1,21 @@
+# This is Git's per-user configuration file.
+#
+[core]
+	autocrlf = input
+	excludesfile = /Users/yassine/.gitignore_global
+	editor = vim
+[user]
+	name = Yassine Gherbi
+	email = yassine@hexelnet.com
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+# [alias]
+	# log aliases (DOESNT WORK FOR NOW)
+	# head = "simple_git_head" -1
+	# slog = "simple_git_log" -15
+[init]
+	defaultBranch = master
