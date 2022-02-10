@@ -73,6 +73,10 @@ nmap <CR> o<Esc>
 " Start from bottom part of comment to select the full comment
 nmap <C-5> %v%
 
+" Navigation
+nmap <C-o> :action Back<CR>
+nmap <C-i> :action Forward<CR>
+
 " sethandler Config"
 sethandler <S-CR> a:vim
 sethandler <C-2> a:vim
@@ -81,10 +85,10 @@ sethandler <C-D> a:vim
 sethandler <C-F> a:ide
 sethandler <C-G> a:vim
 sethandler <C-H> a:vim
-sethandler <C-I> a:ide
+sethandler <C-I> a:vim
 sethandler <C-L> a:vim
 sethandler <C-N> a:vim
-sethandler <C-O> a:ide
+sethandler <C-O> a:vim
 sethandler <C-P> a:vim
 sethandler <C-Q> a:ide
 sethandler <C-T> a:vim
