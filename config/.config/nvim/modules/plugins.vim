@@ -7,6 +7,8 @@ endif
 " Specify a directory for plugins
 call plug#begin("~/.config/nvim/plugged")
 
+    Plug 'wakatime/vim-wakatime'
+
     " Editing files
     Plug 'tpope/vim-surround'                                                  " Change easy surroundings
     Plug 'tpope/vim-repeat'                                                    " Better dot repeat
@@ -23,6 +25,7 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'                             " Nerdtree colors
     Plug 'Xuyuanp/nerdtree-git-plugin'                                         " Git status in Nerdtree
     Plug 'ryanoasis/vim-devicons'                                              " Icon Fonts
+    Plug 'RRethy/vim-illuminate'                                               " Highlight same stuff
 
     " Functionality
     Plug 'neoclide/coc.nvim', {'branch': 'release'}                            " Autocomplete
@@ -36,6 +39,9 @@ call plug#begin("~/.config/nvim/plugged")
     " Plug 'peitalin/vim-jsx-typescript'
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'mattn/emmet-vim'
+
+    " Other languages and stuff
+    Plug 'dag/vim-fish'
 
 " Initialize plugin system
 call plug#end()

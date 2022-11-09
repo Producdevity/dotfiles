@@ -19,3 +19,5 @@
 	# slog = "simple_git_log" -15
 [init]
 	defaultBranch = master
+[commit]
+	template = /Users/yassine/.stCommitMsg

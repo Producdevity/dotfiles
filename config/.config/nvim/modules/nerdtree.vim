@@ -22,5 +22,5 @@ endfunction
 " ---------------------
 "  nerdtree-git-plugin
 " ---------------------
-let g:NERDTreeGitStatusUseNerdFonts = 1                    " Use icons
-let g:NERDTreeGitStatusShowClean = 1                       " Show 'clean' indicator
+let g:NERDTreeGitStatusUseNerdFonts = 1 " Use icons
+let g:NERDTreeGitStatusShowClean = 1 " Show 'clean' indicator

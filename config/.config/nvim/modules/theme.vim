@@ -12,7 +12,7 @@ let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_invert_selection='0'
 
 " Column Color
-" highlight ColorColumn ctermbg=0 guibg=#e5a3a3
+highlight ColorColumn ctermbg=0 guibg=#e5a3a3
 
 " LineNumber Color
 highlight LineNr guifg=#5598c6
@@ -21,4 +21,7 @@ highlight LineNr guifg=#5598c6
 highlight CursorLine gui=underline cterm=underline
 
 " Prevent drawing whitespaces twice (performance)
-highlight NonText cterm=NONE ctermfg=NONE
+" highlight NonText cterm=NONE ctermfg=NONE
+
+" Should prevent hidden cursor bug
+set guioptions-=L
