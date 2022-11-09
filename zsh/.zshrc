@@ -132,7 +132,7 @@ bindkey '^[clear' clear-screen
 source "$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh"
 
 # Make all GNU flavor commands available, may override same-name BSD flavor commands
-# export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
 
 
 export PATH="/usr/local/sbin:$PATH"
