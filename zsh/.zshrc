@@ -1,22 +1,15 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-PATH=$PATH:~/bin
-export PATH
 
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=~/bin:~/.composer/vendor/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-# export ZSH=/Users/yassine/.oh-my-zsh
+export ZSH=/Users/yassine/.oh-my-zsh
 
 # Path to Homebrew
 export HOMEBREW_PREFIX=/usr/local
 
 export NODE_PATH='/usr/local/lib/node_modules'
-
-# Make all GNU flavor commands available, may override same-name BSD flavor commands
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
 
 # # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -80,7 +73,7 @@ plugins=(you-should-use git gitfast node yarn npm vi-mode sudo macos z zsh-autos
 # plugins=(wakatime git gitfast node yarn npm zsh-vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting)
 
 # load oh-my-zsh
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # ZSH autosuggenstion configuration (load after oh-my-zsh)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan,bold,underline"
@@ -92,7 +85,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan,bold,underline"
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# Make all GNU flavor commands available, may override same-name BSD flavor commands
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -137,6 +131,10 @@ bindkey '^[clear' clear-screen
 # NVim Gruvbox Theme
 source "$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh"
 
+# Make all GNU flavor commands available, may override same-name BSD flavor commands
+# export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+
+
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
@@ -148,7 +146,9 @@ export PATH=~/bin:~/.composer/vendor/bin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Enable ls colors
+unset LSCOLORS
 export CLICOLOR=1
+export CLICOLOR_FORCE=1
 export LS_COLORS='rs=0:no=00:mi=00:mh=00:ln=01;36:or=01;31:di=01;34:ow=04;01;34:st=34:tw=04;34:pi=01;33:so=01;33:do=01;33:bd=01;33:cd=01;33:su=01;35:sg=01;35:ca=01;35:ex=01;32:'
 
 # FZF Settings
