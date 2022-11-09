@@ -5,7 +5,9 @@ alias vim='nvim '
 alias sudo='sudo '
 
 # some more ls aliases
-alias ls="/usr/local/opt/coreutils/libexec/gnubin/ls --color=auto"
+# alias ls="/usr/local/opt/coreutils/libexec/gnubin/ls --color=auto"
+# alias ls="/usr/local/opt/coreutils/libexec/gnubin/ls "
+alias ls="gls --color=always"
 alias l='ls -FGlAhp '
 alias la='ls -A '
 alias ll='ls -alhF '
