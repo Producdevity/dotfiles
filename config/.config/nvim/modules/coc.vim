@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
     \'coc-eslint',
     \'coc-tslint',
     \'coc-sh',
+    \'coc-solargraph',
     \'coc-phpls',
     \'coc-css',
     \'coc-git',
@@ -98,3 +99,6 @@ endif
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
+
+" Fix for using Node through NVM
+let g:coc_node_path = trim(system('which node'))

@@ -1,47 +1,37 @@
-alias vim_='/usr/local/bin/vim '
 alias mvim='mvim -v'
+alias vvim='/usr/local/bin/vim '
 alias vim='nvim '
 
 alias sudo='sudo '
 
-alias s='sequelize'
-
-#project of the day
-alias cdtcp='cd ~/Coding/personal/theoriecursusplanner/theoriecursusplanner/'
-alias tcp='cdtcp && panw'
-
-# used to lsicons [shows icons next to the file info]
-# alias ls='/opt/coreutils/bin/ls '
-
 # some more ls aliases
-alias ll='ls -alhF '
+alias ls="/usr/local/opt/coreutils/libexec/gnubin/ls --color=auto"
 alias l='ls -FGlAhp '
 alias la='ls -A '
-alias llf='ls -alhF | grep "^-" ' # list only files using grep
+alias ll='ls -alhF '
 alias lld='ls -alhF | grep "^d" ' # list only dirs using grep
+alias llf='ls -alhF | grep "^-" ' # list only files using grep
 alias lsdir='ls -dl */ ' # list only dirs
+
+# List stuff
+alias tre='tree -aCL'
+alias psgrep='ps -ef | head -1; ps -ef | grep '
+alias lssize='du -skh * | sort -h '
+alias lssizelargefirst='du -skh * | sort -rh '
 
 # navigate
 alias a='alias '
-alias cdi='cd ~/Coding && ls'
+alias B='cd $OLDPWD' # Go back to previous directory
 alias b='cd ..'
 alias bb='cd ../..'
 alias bbb='cd ../../..'
 alias bbbb='cd ../../../..'
 
-#navigate Coding
-alias cdisp='cd ~/Coding/school/projects && ls'
-alias cdisch='cd ~/Coding/school/ && ls'
-alias cdicli='cd ~/Coding/client/ && ls'
-alias cdiper='cd ~/Coding/personal/ && ls'
-alias cdites='cd ~/Coding/testing/ && ls'
-alias cditut='cd ~/Coding/tutorial/ && ls'
-alias cdstage='cd ~/Coding/stage/ && ls'
-alias cdaok='cd ~/Coding/stage/code-bridge/aok && ls'
-alias aokl='cd ~/Coding/stage/code-bridge/aok-laravel && ls'
-
 #Reload
 alias reloadalias='source ~/.bash_aliases'
+
+#Current stuff
+alias vapesites='vim ~/Coding/personal/2022/yes-i-am-old-enough/Website/sites.txt '
 
 #Laravel
 alias phpunit='vendor/bin/phpunit '
@@ -79,48 +69,51 @@ alias vai='valet install'
 alias vals='valet install'
 
 #Vim
-alias ctags=/usr/local/bin/ctags
+# alias tags=/usr/local/bin/ctags
 
 #Vim fast-edit
-alias vimba='vim ~/.bash_aliases'
-alias vimbp='vim ~/.bash_profile'
-alias vimbr='vim ~/.bashrc'
-alias vimrc='vim ~/.vim/.vimrc'
-alias nvimrc='vim ~/.config/nvim/init.vim'
-alias nvimdir='cd ~/.config/nvim'
-alias vimirc='vim ~/.ideavimrc'
-alias vimssh='vim ~/.ssh/config'
-alias vimp='vim ~/.profile'
-alias vimz='vim ~/.zshrc'
 alias .bp='. ~/.bash_profile'
 alias .br='. ~/.bashrc'
 alias .p='. ~/.profile'
 alias .z='. ~/.zshrc'
+alias brewrc='vim ~/.config/brew-install-script.sh'
+alias kittyrc='vim ~/.config/kitty/kitty.conf'
+alias nvimdir='cd ~/.config/nvim'
+alias nvimrc='vim ~/.config/nvim/init.vim'
+alias tmuxls='tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}'
 alias tmuxrc='vim ~/.tmux.conf'
-alias tmuxprc='vim ~/.tmux-powerlinerc'
 alias v='vim .'
-alias tmuxx='tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}'
+alias vimba='vim ~/.bash_aliases'
+alias vimbp='vim ~/.bash_profile'
+alias vimbr='vim ~/.bashrc'
+alias vimh='sudo vim /etc/hosts'
+alias vimirc='vim ~/.ideavimrc'
+alias vimp='vim ~/.profile'
+alias vimrc='vim ~/.vim/.vimrc'
+alias vimssh='vim ~/.ssh/config'
+alias vimz='vim ~/.zshrc'
 
 #Git
+alias delete_ds_store='find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch '
 alias ga.='git add .'
-alias gaA='git add -A'
+alias ga='git add '
 alias gb='git branch'
-alias gd='git diff'
-alias ghead='simple_git_head -1'
-alias gslog='simple_git_log -15'
-alias gch='git checkout'
 alias gc='git commit -m'
-alias gst='git status'
-alias gs='git status | cowsay | lolcat '
-alias grv='git remote -v'
-alias gp='git push'
-alias gpo='git push origin'
-alias wip="git add . && git commit -m 'wip'"
-alias gtree='git log --oneline --graph --decorate --all '
-alias gtreepretty='git log --pretty=oneline --graph --decorate --all '
+alias gch='git checkout'
+alias gd='git diff'
 alias glg1="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all "
 alias glg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all "
-alias delete_ds_store='find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch '
+alias gp='git push'
+alias gpo='git push origin'
+alias grv='git remote -v'
+alias gs='git status | cowsay | lolcat '
+alias gst='git status'
+alias gtree='git log --oneline --graph --decorate --all '
+alias gtreepretty='git log --pretty=oneline --graph --decorate --all '
+alias wip="git add . && git commit -m 'chore: work in progress'"
+
+
+# Git Dotfiles
 alias gitdf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gitd='gitdf '
 alias gitda='gitdf add'
@@ -129,16 +122,19 @@ alias gitdd='gitdf diff'
 alias gitdc='gitdf commit -m'
 alias dotfiles='cd $HOME/.dotfiles'
 
-alias gpushod='git push origin develop '
-alias gpullod='git pull origin develop '
-alias gpushom='git push origin master '
-alias gpullom='git pull origin master '
+# Git rebase
+alias grf='git fetch && git rebase origin/master'
+alias grp='git push --force-with-lease'
+alias ggrpush='ggpush --force-with-lease'
+
+# Python
+alias python='python3 '
+alias pip='pip3 '
 
 #Node
 alias nm='nodemon server'
 alias nrt='npm run test'
 alias nt='npm run test'
-# alias nr='npm run'
 alias nrs='npm run start'
 alias nrb='npm run build'
 alias nrw='npm run watch'
@@ -147,28 +143,18 @@ alias ni='npm install'
 alias nis='npm install --save'
 alias nisd='npm install --save-dev'
 alias npmig='sudo npm install -g'
-alias npmis='npm install --save'
-alias npmisd='npm install --save-dev'
+
+alias p='pnpm '
 
 alias y='yarn'
-alias ys='yarn start'
-alias ya='yarn add'
-alias yga='yarn global add'
-alias yd='yarn dev'
-alias yw='yarn watch'
-alias yb='yarn build'
-alias yt='yarn test'
-alias ytw='yarn test:watch'
-alias t='yarn test'
-alias yu='yarn unit'
-alias ye='yarn e2e'
-alias yf='yarn flow '
-alias yl='yarn lint '
-alias yel='yarn eslint '
-alias updateYarn='curl --compressed -o- -L https://yarnpkg.com/install.sh | bash '
+alias ys='y start'
+alias ya='y add'
+alias yga='y global add'
 
-ARTIFACTOR_REGISTRY="https://artifactory.persgroep.cloud/artifactory/api/npm/npm";
-alias setartifactoryregistry="npm config set registry ${ARTIFACTOR_REGISTRY} && yarn config set registry ${ARTIFACTOR_REGISTRY}"
+# Update package managers
+alias updateyarn='curl --compressed -o- -L https://yarnpkg.com/install.sh | bash '
+alias updatepnpm='pnpm add -g pnpm'
+
 alias setyarnregistry="yarn config set registry https://registry.yarnpkg.com"
 alias setnpmregistry="npm config set registry https://registry.npmjs.org"
 
@@ -220,9 +206,6 @@ alias xcodeCleanDerivedData='rm -rf ~/Library/Developer/Xcode/DerivedData/* '
 
 alias ws='wml start '
 
-#Meteor
-alias m='meteor'
-
 #Speedy
 alias getlocalip='ifconfig | grep inet\ | tail -1 | cut -d " " -f 2 '
 alias cdc='pwd | pbcopy' # copy pwd to clipboard
@@ -234,12 +217,10 @@ alias treee="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias findf="find . -type f -name "
 alias findd="find . -type d -name "
 alias idea.='idea $(pwd)'
-alias cp_prettierrc='cp ~/lib/.prettierrc_defaults ./.prettierrc'
-
 
 
 #ANDROID
-alias lsd='adb devices' # list android devices
+alias lsadb='adb devices' # list android devices
 
 #iOS
 alias lsios='xcrun instruments -s devices ' # list ios devices
@@ -257,13 +238,8 @@ alias dockshowhidden='defaults write com.apple.Dock showhidden -bool YES; killal
 alias blackslack="sudo ~/Coding/personal/2018/WorkFlow/SH/darkify_slack.sh"
 
 #ssh
-alias switch_ssh_hexelnet="switch_ssh hexelnet"
-alias sshexelnet="switch_ssh hexelnet"
-alias switch_ssh_persgroep="switch_ssh persgroep"
-alias sspersgroep="switch_ssh persgroep"
-alias switch_ssh_way="switch_ssh way"
-alias ssway="switch_ssh way"
 alias copyssh='cat ~/.ssh/id_rsa.pub | pbcopy'
+alias copysshed='cat ~/.ssh/id_ed25519.pub | pbcopy'
 alias reloadssh='sudo launchctl start com.openssh.sshd '
 
 
@@ -273,19 +249,9 @@ alias pg-stop='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 
-#brew
-alias brs='brew services '
-alias brsl='brew services list '
-
-
 #mysql
 alias my='mycli -u root -p root '
 alias startmysql='/Applications/MAMP/bin/startMysql.sh '
-
-#vagrant
-alias vg='vagrant '
-alias vgu='vagrant up '
-
 
 #iterm
 # remove
@@ -294,7 +260,15 @@ alias removeItermFromDock="/usr/libexec/PlistBuddy -c 'Add :LSUIElement bool tru
 # restore
 alias restoreItermToDock="/usr/libexec/PlistBuddy -c 'Delete :LSUIElement' /Applications/iTerm 2.app/Contents/Info.plist "
 
-alias onelogin='java -jar $HOME/.aws/onelogin/onelogin-aws-cli.jar --profile onelogin --username yassine.gherbi@persgroep.net --appid 354709 --subdomain persgroep --region eu-west-1'
+# KPN
+#alias killdefender="launchctl unload /Library/LaunchAgents/com.microsoft.wdav.tray.plist"
+alias killdefender="launchctl bootout /Library/LaunchAgents/com.microsoft.wdav.tray.plist"
+alias startdefender="launchctl load /Library/LaunchAgents/com.microsoft.wdav.tray.plist"
 
-alias tetris='~/tetris'
 
+alias disablespotlight="sudo mdutil -a -i off "
+
+#unalias
+# unalias ls
+
+echo ".bash_aliases loaded"

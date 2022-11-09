@@ -27,8 +27,4 @@ endif
 au BufNewFile,BufRead .prettierrc set filetype=json
 au BufNewFile,BufRead .eslintrc set filetype=json
 
-au BufNewFile,BufRead config_persgroep set filetype=sshconfig
-au BufNewFile,BufRead config_hexelnet set filetype=sshconfig
-au BufNewFile,BufRead config_base set filetype=sshconfig
-
 au BufNewFile,BufRead *.xcworkspacedata set filetype=xml

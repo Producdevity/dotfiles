@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/profile.pre.bash"
 # --------------------------------------------------------------------
 #  mkcd:  Make an directory givin in argument '1' and cd in to this directory
 # --------------------------------------------------------------------
@@ -56,5 +54,14 @@ check_colors () {
   }'
 }
 
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/profile.post.bash"
+# --------------------------------------------------------------------
+# catjson: pretty print json
+#
+# Example: catjson package.json
+# --------------------------------------------------------------------
+catjson() {
+    cat "$1" | pjson
+}
+
+echo ".profile loaded"
+

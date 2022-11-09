@@ -18,3 +18,10 @@ source $HOME/.config/nvim/modules/nerdtree.vim
 " autocmd BufWritePre * %s/\s\+$//e
 
 " let g:smoothie_enabled = 0
+
+
+" Why need Perl? We already have the Python3, Ruby, Node.js and Lua.
+let g:loaded_perl_provider = 0
+
+" Ok, no Ruby
+let g:loaded_ruby_provider = 0

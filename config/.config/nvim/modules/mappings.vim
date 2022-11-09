@@ -62,6 +62,9 @@ nnoremap K i<CR><Esc>
 " auto indent complete file (format)
 nmap <leader>l mzgg=G`z
 
+" auto indent complete file (format json)
+nmap <leader>lj :%!python -m json.tool<CR>
+
 " no highlight search
 nnoremap <leader>m :noh<CR>
 " close buffer

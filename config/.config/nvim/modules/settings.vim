@@ -60,11 +60,15 @@ set undoreload=10000
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=300
+" set updatetime=300
 
 
 if $TMUX == ''
   set clipboard+=unnamed
+endif
+
+if &shell =~# 'fish$'
+    set shell=sh
 endif
 
 if exists('+colorcolumn')
@@ -72,6 +76,7 @@ if exists('+colorcolumn')
   let &l:colorcolumn='+' . join(range(0, 254), ',+')
 endif
 
-set redrawtime=1000
+" set redrawtime=1000
 set regexpengine=1
 
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
