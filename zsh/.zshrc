@@ -1,16 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/yassine/.oh-my-zsh
-
-# Path to Homebrew
-export HOMEBREW_PREFIX=/usr/local
-
-export NODE_PATH='/usr/local/lib/node_modules'
-
 # # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -18,6 +7,20 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
+export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
+
+# Path to Java JDK
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/yassine/.oh-my-zsh
+
+# Path to Homebrew
+export HOMEBREW_PREFIX=/usr/local
+
+# Path to global node modules
+export NODE_PATH='/usr/local/lib/node_modules'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -68,9 +71,8 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(wakatime git gitfast composer laravel5 node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting command-not-found)
-plugins=(you-should-use git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting)
-# plugins=(wakatime git gitfast node yarn npm zsh-vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(you-should-use git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting command-not-found) # without benchmarking
+# plugins=(zsh-prompt-benchmark you-should-use git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting) # for benchmarking
 
 # load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -112,8 +114,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
 # Load custom aliases
@@ -182,19 +184,35 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-# pnpm
-export PNPM_HOME="/Users/yassine/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-#
-# # NVM, Wants to be at the botom like every god damn package
+# Homebrew Command Not Found
+HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
+if [ -f "$HB_CNF_HANDLER" ]; then
+source "$HB_CNF_HANDLER";
+fi
+
+# Openssl
+export CFLAGS="-L$(brew --prefix openssl)/lib"
+export LDFLAGS="-I$(brew --prefix openssl)/include" 
+
+# zlib is keg-only, which means it was not symlinked into /usr/local,
+# because macOS already provides this software and installing another version in
+# parallel can cause all kinds of trouble.
+# For compilers to find zlib you may need to set:
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
+# For pkg-config to find zlib you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+
+# NVM, Wants to be at the botom like every god damn package
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-# date +%s%N
-TERM=xterm-256color
+
+export TERM=xterm-256color
+
 export PATH="${HOME}/.pyenv/shims:${PATH}"
 
+# load powerlevel10k theme
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
