@@ -29,6 +29,10 @@ alias bb='cd ../..'
 alias bbb='cd ../../..'
 alias bbbb='cd ../../../..'
 
+# Glow docs
+alias docssbn='glow -s dark ~/Coding/personal/docs/semantic-branch-names.md'
+alias docsscm='glow -s dark ~/Coding/personal/docs/semantic-commit-messages.md'
+
 #Reload
 alias reloadalias='source ~/.bash_aliases'
 
@@ -235,6 +239,8 @@ alias schedulefrequency='defaults write com.apple.SoftwareUpdate ScheduleFrequen
 alias addspacer="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}';killall Dock"
 #make hidden apps transparent in dock
 alias dockshowhidden='defaults write com.apple.Dock showhidden -bool YES; killall Dock'
+# keyboard repeat pls
+alias keyrepeatplease='default write -g ApplePressAndHoldEnabled -bool false'
 
 #FUN
 alias blackslack="sudo ~/Coding/personal/2018/WorkFlow/SH/darkify_slack.sh"

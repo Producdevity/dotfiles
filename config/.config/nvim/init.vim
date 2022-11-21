@@ -9,6 +9,7 @@ source $HOME/.config/nvim/modules/autocmds.vim
 
 " Plugin Settings
 source $HOME/.config/nvim/modules/coc.vim
+source $HOME/.config/nvim/modules/copilot.vim
 source $HOME/.config/nvim/modules/emmet.vim
 source $HOME/.config/nvim/modules/fzf.vim
 source $HOME/.config/nvim/modules/jsx.vim
