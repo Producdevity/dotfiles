@@ -1,0 +1,4 @@
+config/.config/nvim/plugged
+
+.vim/bundle
+.vim/undo
