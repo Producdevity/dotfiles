@@ -71,7 +71,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting command-not-found) # without benchmarking
+plugins=(git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting) # without benchmarking
 # plugins=(zsh-prompt-benchmark git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting) # for benchmarking
 
 # load oh-my-zsh
@@ -114,8 +114,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 
 # Load custom aliases
@@ -190,26 +190,28 @@ if [ -f "$HB_CNF_HANDLER" ]; then
 source "$HB_CNF_HANDLER";
 fi
 
-# Openssl
-export CFLAGS="-L$(brew --prefix openssl)/lib"
-export LDFLAGS="-I$(brew --prefix openssl)/include" 
+# Openssl (uncomment if you need it)
+# export CFLAGS="-L$(brew --prefix openssl)/lib"
+# export LDFLAGS="-I$(brew --prefix openssl)/include" 
 
+# zlib (uncomment if you need it)
 # zlib is keg-only, which means it was not symlinked into /usr/local,
 # because macOS already provides this software and installing another version in
 # parallel can cause all kinds of trouble.
 # For compilers to find zlib you may need to set:
-export LDFLAGS="-L/usr/local/opt/zlib/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include"
+# export LDFLAGS="-L/usr/local/opt/zlib/lib"
+# export CPPFLAGS="-I/usr/local/opt/zlib/include"
 # For pkg-config to find zlib you may need to set:
-export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+# export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
-# NVM, Wants to be at the botom like every god damn package
+# NVM, Wants to be at the bottom like every god damn package
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 
 export TERM=xterm-256color
 
+# add pyenv to path
 export PATH="${HOME}/.pyenv/shims:${PATH}"
 
 # load powerlevel10k theme
