@@ -4,7 +4,7 @@
 # To execute: save and `chmod +x ./brew-install-script.sh` then `./brew-install-script.sh`
 
 echo "Installing brew..."
-# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing brew cask..."
 brew tap homebrew/cask
@@ -18,12 +18,14 @@ brew install deno
 brew install nvm
 brew install php
 brew install python
+brew install openjdk@11
 
 # Dev Tools
 echo "Installing development tools..."
 brew install android-platform-tools
 brew install composer
 brew install docker
+brew install fastlane
 brew install gh
 brew install git
 brew install gradle
@@ -31,6 +33,7 @@ brew install mysql@5.7
 brew install pnpm
 brew install pyenv
 brew install rbenv
+brew install watchman
 brew install yarn
 brew install --cask adobe-creative-cloud
 brew install --cask arduino
@@ -96,9 +99,12 @@ brew install --cask slack
 # Fonts
 echo "Installing fonts..."
 brew install font-jetbrains-mono-nerd-font
-brew install --cask font-jetbrains-mono
 brew install --cask font-hack-nerd-font
+brew install --cask font-iosevka
+brew install --cask font-jetbrains-mono
+brew install --cask font-juliamono
 brew install --cask font-source-code-pro
+
 
 # Keyboard stuff
 echo "Installing keyboard software..."
@@ -108,21 +114,25 @@ brew install --cask qmk-toolbox
 brew install --cask via
 brew install --cask vial
 
+# Productivity Apps
+echo "Installing productivity apps and tools..."
+brew install --cask alt-tab
+brew install --cask alfred
+brew install --cask todoist
+brew install --cask toggl-track
+brew install --cask rectangle
+brew install --cask cheatsheet
+
 # Other
 echo "Installing everything else..."
-brew install --cask alfred
 brew install --cask authy
 brew install --cask balance-lock # Because Apple is a piece of shit
 brew install --cask balenaetcher
-brew install --cask cheatsheet
 brew install --cask f-bar
 brew install --cask intel-power-gadget
 brew install --cask kicad
 brew install --cask lastpass
 brew install --cask raspberry-pi-imager
-brew install --cask rectangle
 brew install --cask setapp
 brew install --cask spotify
-brew install --cask todoist
-brew install --cask toggl-track
 brew install --cask ultimaker-cura
