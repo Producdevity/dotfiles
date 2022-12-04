@@ -29,10 +29,13 @@ brew install fastlane
 brew install gh
 brew install git
 brew install gradle
+brew install jesseduffield/lazygit/lazygit
 brew install mysql@5.7
+brew install nvim
 brew install pnpm
 brew install pyenv
 brew install rbenv
+brew install vim
 brew install watchman
 brew install yarn
 brew install --cask adobe-creative-cloud
@@ -50,7 +53,6 @@ echo "Installing terminal tools and binaries..."
 brew install avrdude
 brew install coreutils
 brew install cowsay
-brew install fish
 brew install glow
 brew install gnupg
 brew install htop
@@ -69,7 +71,6 @@ brew install zsh-syntax-highlighting
 brew install --cask alacritty
 brew install --cask iterm2
 brew install --cask kitty
-brew tap homebrew/command-not-found
 
 # Web Tools
 echo "Installing web tools..."
