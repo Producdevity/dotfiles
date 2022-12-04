@@ -8,10 +8,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
-export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
+export PATH=$HOME/bin:$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
 
 # Path to Java JDK
 export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/yassine/.oh-my-zsh
@@ -21,6 +22,11 @@ export HOMEBREW_PREFIX=/usr/local
 
 # Path to global node modules
 export NODE_PATH='/usr/local/lib/node_modules'
+
+# Path to Android SDK
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -72,6 +78,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting) # without benchmarking
+plugins=(git gitfast node yarn npm vi-mode sudo macos z  zsh-syntax-highlighting) # without benchmarking and autosuggestions
 # plugins=(zsh-prompt-benchmark git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting) # for benchmarking
 
 # load oh-my-zsh
@@ -97,7 +104,7 @@ export LANG=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
 else
-  export EDITOR='nvim' # or mvim
+  export EDITOR='nvim' # as if there is anything else
 fi
 
 
@@ -144,9 +151,6 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 # export PATH="/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 # export PATH="/usr/local/opt/ruby/bin:$PATH"
 
-export PATH=~/bin:~/.composer/vendor/bin:$PATH
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 # Enable ls colors
 unset LSCOLORS
 export CLICOLOR=1
@@ -167,7 +171,10 @@ fi
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=$(brew --prefix)/share/zsh-syntax-highlighting/highlighters
 
+
+# Path to Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
 
@@ -180,14 +187,16 @@ else
 fi
 
 
+echo 'loading git completions...'
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+echo 'done loading git completions!'
 
 # Homebrew Command Not Found
-HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
+export HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
 if [ -f "$HB_CNF_HANDLER" ]; then
-source "$HB_CNF_HANDLER";
+  source "$HB_CNF_HANDLER";
 fi
 
 # Openssl (uncomment if you need it)
@@ -204,22 +213,22 @@ fi
 # For pkg-config to find zlib you may need to set:
 # export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
-# NVM, Wants to be at the bottom like every god damn package
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-
 export TERM=xterm-256color
 
 # add pyenv to path
 export PATH="${HOME}/.pyenv/shims:${PATH}"
 
-# load powerlevel10k theme
+# Load powerlevel10k theme
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+
+# NVM, Wants to be at the bottom like every god damn package (oh, this one really should be at the bottom...)
+export NVM_DIR=$HOME/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 echo ".zshrc loaded"
