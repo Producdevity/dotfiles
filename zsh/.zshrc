@@ -77,8 +77,8 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting) # without benchmarking
-plugins=(git gitfast node yarn npm vi-mode sudo macos z  zsh-syntax-highlighting) # without benchmarking and autosuggestions
+# plugins=(git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting) # without benchmarking
+plugins=(git gitfast node yarn npm vi-mode sudo macos z zsh-syntax-highlighting) # without benchmarking and autosuggestions
 # plugins=(zsh-prompt-benchmark git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting) # for benchmarking
 
 # load oh-my-zsh
