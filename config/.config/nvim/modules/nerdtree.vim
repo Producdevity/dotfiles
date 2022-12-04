@@ -2,11 +2,13 @@ let g:NERDTreeIgnore = ['^node_modules$', '^\.DS_Store$', '^tags$', '\.git$[[dir
 let g:NERDTreeShowHidden = 1                                                                                            " Show hidden files/directories
 
 " Toggle Nerdtree
-noremap <leader><leader>n :NERDTreeToggle<CR>
+nnoremap <leader><leader>n :silent! NERDTreeToggle<CR>
+nnoremap <C-b>:silent! NERDTreeToggle <CR>
 nnoremap <D-1> :NERDTreeToggle<CR>
 
 "Find current file in nerdtree
 noremap <leader><leader>f :NERDTreeFind<CR>
+
 
 " NERDTreeFindToggle (set in iTerm to call NERDTreeFindToggle())
 function NERDTreeFindToggle()
