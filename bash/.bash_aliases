@@ -1,5 +1,5 @@
 alias mvim='mvim -v'
-alias vvim='/usr/local/bin/vim '
+alias vvim='/usr/bin/vim '
 alias vim='nvim '
 
 alias sudo='sudo '
