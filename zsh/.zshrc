@@ -78,19 +78,18 @@ HIST_STAMPS="dd/mm/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting) # without benchmarking
-plugins=(git gitfast node yarn npm vi-mode sudo macos z zsh-syntax-highlighting) # without benchmarking and autosuggestions
+plugins=(git gitfast node yarn npm vi-mode sudo macos z zsh-syntax-highlighting zsh-autosuggestions) # without benchmarking
 # plugins=(zsh-prompt-benchmark git gitfast node yarn npm vi-mode sudo macos z zsh-autosuggestions zsh-syntax-highlighting) # for benchmarking
 
 # load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # ZSH autosuggenstion configuration (load after oh-my-zsh)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan,bold,underline"
-
 # bindkey '^I' autosuggest-accept
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan,bold,underline"
 # ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(buffer-empty bracketed-paste accept-line push-line-or-edit)
-# ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-# ZSH_AUTOSUGGEST_USE_ASYNC="true"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_USE_ASYNC="true"
 
 # User configuration
 
