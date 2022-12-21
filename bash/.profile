@@ -63,5 +63,15 @@ catjson() {
     cat "$1" | pjson
 }
 
+# --------------------------------------------------------------------
+# catjson: pretty print json
+#
+# Example: catjson package.json
+# --------------------------------------------------------------------
+vape() {
+    echo "$1" >> ~/Coding/personal/2022/yes-i-am-old-enough/Website/sites.txt 
+}
+
 echo ".profile loaded"
+
 
