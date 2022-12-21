@@ -117,12 +117,13 @@ brew install --cask vial
 
 # Productivity Apps
 echo "Installing productivity apps and tools..."
-brew install --cask alt-tab
+brew install --cask adobe-acrobat-pro
 brew install --cask alfred
+brew install --cask alt-tab
+brew install --cask cheatsheet
+brew install --cask rectangle
 brew install --cask todoist
 brew install --cask toggl-track
-brew install --cask rectangle
-brew install --cask cheatsheet
 
 # Other
 echo "Installing everything else..."
