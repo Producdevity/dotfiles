@@ -276,6 +276,8 @@ alias startdefender="launchctl load /Library/LaunchAgents/com.microsoft.wdav.tra
 
 alias disablespotlight="sudo mdutil -a -i off "
 
+alias cleardns="sudo dscacheutil -flushcache "
+
 #unalias
 # unalias ls
 
