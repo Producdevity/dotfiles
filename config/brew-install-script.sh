@@ -78,9 +78,10 @@ brew install httpie
 brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask google-chrome-canary
-brew install --cask opera-gx
 brew install --cask ngrok
+brew install --cask opera-gx
 brew install --cask postman
+brew install --cask tor-browser
 
 # Design Tools
 echo "Installing design tools..."
