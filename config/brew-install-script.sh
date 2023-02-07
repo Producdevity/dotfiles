@@ -128,14 +128,22 @@ brew install --cask toggl-track
 
 # Other
 echo "Installing everything else..."
+brew install evolv-escribe-suite
+brew install --cask ankerwork
 brew install --cask authy
 brew install --cask balance-lock # Because Apple is a piece of shit
 brew install --cask balenaetcher
+brew install --cask bunqcommunity-bunq
+brew install --cask cameracontroller
 brew install --cask f-bar
 brew install --cask intel-power-gadget
 brew install --cask kicad
 brew install --cask lastpass
+brew install --cask little-snitch
+brew install --cask lycheeslicer
+brew install --cask rar
 brew install --cask raspberry-pi-imager
 brew install --cask setapp
+brew install --cask sidequest
 brew install --cask spotify
 brew install --cask ultimaker-cura
