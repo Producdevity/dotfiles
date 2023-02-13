@@ -1,0 +1,27 @@
+#!/bin/zsh
+
+# Xcode commandline tools
+echo "Installing xcode commandline tools"
+xcode-select --install
+
+
+# Homebrew
+echo "Installing brew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
+# Install homebrew formulae and casks
+echo "Installing brew formulae and casks"
+brew bundle --file="$HOME/.dotfiles/config/Brewfile"
+
+
+# set Git preferences
+git config --global user.email "y.gherbi.dev@gmail.com"
+git config --global user.name "Yassine Gherbi"
+git config --global core.editor 'vim'
+
+
+# install vim plugins
+echo "Installing vim plugins"
+vim -c 'PlugInstall' \
+    -c 'qa!'
