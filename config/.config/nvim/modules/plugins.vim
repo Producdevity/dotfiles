@@ -19,7 +19,6 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'vim-airline/vim-airline-themes'                                      " Airline themes
     Plug 'morhetz/gruvbox'                                                     " Color Scheme
     Plug 'roman/golden-ratio'                                                  " Automatically resizing windows
-    Plug 'psliwka/vim-smoothie'                                                " Smooth Scrolling
     Plug 'christoomey/vim-tmux-navigator'                                      " Easy TMUX and Vim navigation
     Plug 'scrooloose/nerdtree'                                                 " Nerdtree File Explorer
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'                             " Nerdtree colors

@@ -6,3 +6,5 @@ au BufNewFile,BufRead .eslintrc set filetype=json
 au BufNewFile,BufRead *.xcworkspacedata set filetype=xml
 
 au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
+au BufNewFile,BufRead Brewfile set filetype=bash
