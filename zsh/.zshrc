@@ -17,8 +17,9 @@ export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/yassine/.oh-my-zsh
 
-# Path to Homebrew
+# Homebrew stuff
 export HOMEBREW_PREFIX=/usr/local
+export HOMEBREW_BUNDLE_FILE=$HOME/.dotfiles/config/Brewfile
 
 # Path to global node modules
 export NODE_PATH='/usr/local/lib/node_modules'

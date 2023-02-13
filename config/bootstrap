@@ -18,8 +18,12 @@ brew bundle --file="$HOME/.dotfiles/config/Brewfile"
 # set Git preferences
 git config --global user.email "y.gherbi.dev@gmail.com"
 git config --global user.name "Yassine Gherbi"
-git config --global core.editor 'vim'
+git config --global core.editor 'nvim'
 
+# install vim plugins
+echo "Installing nvim plugins"
+nvim -c 'PlugInstall' \
+    -c 'qa!'
 
 # install vim plugins
 echo "Installing vim plugins"
