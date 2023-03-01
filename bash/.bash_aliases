@@ -30,6 +30,7 @@ alias bbb='cd ../../..'
 alias bbbb='cd ../../../..'
 
 # Glow docs
+alias markdown='glow -s dark '
 alias docssbn='glow -s dark ~/Coding/personal/docs/semantic-branch-names.md'
 alias docsscm='glow -s dark ~/Coding/personal/docs/semantic-commit-messages.md'
 
