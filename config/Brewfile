@@ -47,13 +47,14 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "zulu11"
 
-# Terminal and Utils
+# Terminal, CLI and Utils
 brew "avrdude"
 brew "coreutils"
 brew "cowsay"
 brew "glow"
 brew "gnupg"
 brew "htop"
+brew "lastpass-cli"
 brew "lolcat"
 brew "mas"
 brew "rar"
@@ -69,6 +70,7 @@ brew "zsh-syntax-highlighting"
 cask "alacritty"
 cask "iterm2"
 cask "kitty"
+
 
 # Web Tools
 brew "httpie"
@@ -120,25 +122,26 @@ cask "toggl-track"
 
 # Other
 brew "evolv-escribe-suite"
-brew "lastpass-cli"
 cask "ankerwork"
 cask "authy"
 cask "balance-lock" # Because Apple is a piece of shit
 cask "balenaetcher"
 cask "bunqcommunity-bunq"
-cask "cameracontroller"
 cask "f-bar"
 cask "intel-power-gadget"
-cask "kicad"
 cask "lastpass"
 cask "little-snitch"
-cask "lycheeslicer"
 cask "rar"
 cask "raspberry-pi-imager"
 cask "setapp"
 cask "sidequest"
 cask "spotify"
+
+# Cad & 3D
 cask "ultimaker-cura"
+cask "autodesk-fusion360"
+cask "kicad"
+cask "lycheeslicer"
 
 # Mac App Store
 mas "Backtrack", id: 1477089520
