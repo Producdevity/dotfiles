@@ -74,6 +74,7 @@ cask "kitty"
 
 # Web Tools
 brew "httpie"
+cask "brave-browser"
 cask "firefox"
 cask "google-chrome"
 cask "google-chrome-canary"
