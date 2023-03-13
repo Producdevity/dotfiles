@@ -87,12 +87,19 @@ Replace `APP_ID` with the ID of the app you want to install. You can find the ID
 `brew bundle install`
 
 
+### glow
 
-## Credits
+- `general/glow.yml`: This file contains the configuration on how to render your markdown files using glow. 
 
-Some of the configuration files are based on or inspired by other dotfiles repositories, including;
-- [Wincent's dotfiles](https://github.com/wincent/wincent) for awesome VIM content and inspiration for a great Mac based workflow
-- [The Primeagen's dotfiles](https://github.com/ThePrimeagen/.dotfiles) highly recommended if you like Coconut Oil or Rust. Don't ask, just [https://www.twitch.tv/theprimeagen/clip/ConcernedZanyTapirMVGame-NK6uS63e5Gb5tu4f](watch).
+To run `glow` with this configuration, run the following command:
+
+`glow --config=~/dotfiles/general/glow.yml README.md`
+
+or move/link the file to `~/Library/Preferences /glow/glow. yml` to use it as its default configuration.
+
+You can install it by running the following command:
+
+`brew bundle install` or `brew install glow` to install it separately 
 
 
 
@@ -104,8 +111,6 @@ This project is licensed under the **MIT License**. See the [https://opensource.
 
 ## Credits
 
-- Some of the configuration files are based on or inspired by other dotfiles repositories, including [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles) and [thoughtbot/dotfiles](https://github.com/thoughtbot/dotfiles).
-
-
-
-
+Some configuration files are based on or inspired by other dotfiles repositories, including;
+- [Wincent's dotfiles](https://github.com/wincent/wincent) for awesome VIM content and inspiration for a great Mac based workflow
+- [The Primeagen's dotfiles](https://github.com/ThePrimeagen/.dotfiles) highly recommended if you like Coconut Oil or Rust. Don't ask, just [https://www.twitch.tv/theprimeagen/clip/ConcernedZanyTapirMVGame-NK6uS63e5Gb5tu4f](watch).

@@ -123,6 +123,7 @@ cask "toggl-track"
 
 # Other
 brew "evolv-escribe-suite"
+brew "trash"
 cask "ankerwork"
 cask "authy"
 cask "balance-lock" # Because Apple is a piece of shit
