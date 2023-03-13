@@ -9,6 +9,8 @@ au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 au BufNewFile,BufRead Brewfile set filetype=bash
 
+au BufNewFile,BufRead .mhtml set filetype=bash
+
 " XML
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax

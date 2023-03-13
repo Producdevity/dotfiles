@@ -40,7 +40,8 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'mattn/emmet-vim'
 
     " Other languages and stuff
-    Plug 'dag/vim-fish'
+    " Plug 'dag/vim-fish'                                                        " Fish Shell
+    Plug 'williamboman/mason.nvim'                                             " Mason
 
 " Initialize plugin system
 call plug#end()

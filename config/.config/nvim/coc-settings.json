@@ -1,9 +1,10 @@
 {
+  "coc.preferences.formatOnType": false,
+  "coc.preferences.autoTrigger": "always",
   "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.trailingComma": "all",
   "tsserver.formatOnType": true,
-  "coc.preferences.formatOnType": false,
   "eslint.autoFixOnSave": true,
   "eslint.probe": [
     "javascript",
