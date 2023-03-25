@@ -237,3 +237,8 @@ export NVM_DIR=$HOME/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 echo ".zshrc loaded"
+
+# pnpm
+export PNPM_HOME="/Users/yassine/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
