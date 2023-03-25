@@ -242,3 +242,7 @@ echo ".zshrc loaded"
 export PNPM_HOME="/Users/yassine/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+#
+
+# ChatGPT OpenAI API KEY
+OPENAI_API_KEY=$(security find-generic-password -a "$USER" -s 'OPENAI_API_KEY' -w)
