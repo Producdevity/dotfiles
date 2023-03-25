@@ -70,9 +70,9 @@ brew "xdotool"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 cask "alacritty"
-cask "hammerspoon"
 cask "iterm2"
 cask "kitty"
+cask "phoenix"
 
 
 # Web Tools
