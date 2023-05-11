@@ -21,6 +21,7 @@ brew "openjdk@11"
 
 # Dev Tools
 brew "android-platform-tools"
+brew "bun"
 brew "composer"
 brew "docker"
 brew "fastlane"
@@ -36,7 +37,6 @@ brew "rbenv"
 brew "vim"
 brew "watchman"
 brew "yarn"
-brew "bun"
 cask "adobe-creative-cloud"
 cask "arduino"
 cask "flipper"
@@ -45,6 +45,7 @@ cask "reactotron"
 cask "sourcetree"
 cask "virtualbox"
 cask "visual-studio-code"
+cask "vscodium"
 cask "zulu11"
 
 # Terminal, CLI and Utils
