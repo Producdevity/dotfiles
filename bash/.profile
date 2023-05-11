@@ -78,6 +78,11 @@ __not_working_download_chrome_extension_code() {
   unzip -d "$extension_id-source" "$extension_id.zip"
 }
 
-echo ".profile loaded"
 
+reload_ssh() {
+  sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist
+  sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
+}
+
+echo ".profile loaded"
 
