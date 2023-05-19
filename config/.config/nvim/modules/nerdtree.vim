@@ -26,3 +26,13 @@ endfunction
 " ---------------------
 let g:NERDTreeGitStatusUseNerdFonts = 1 " Use icons
 let g:NERDTreeGitStatusShowClean = 1 " Show 'clean' indicator
+
+
+" -------------------------------
+"  vim-nerdtree-syntax-highlight
+" -------------------------------
+
+
+" Disable uncommon file extensions highlighting 
+" (this is a good idea if you are experiencing lag when scrolling. Find more about lag on next session.)
+" let g:NERDTreeLimitedSyntax = 1

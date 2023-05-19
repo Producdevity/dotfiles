@@ -21,7 +21,7 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'roman/golden-ratio'                                                  " Automatically resizing windows
     Plug 'christoomey/vim-tmux-navigator'                                      " Easy TMUX and Vim navigation
     Plug 'scrooloose/nerdtree'                                                 " Nerdtree File Explorer
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'                             " Nerdtree colors
+    " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'                             " Nerdtree colors
     Plug 'Xuyuanp/nerdtree-git-plugin'                                         " Git status in Nerdtree
     Plug 'ryanoasis/vim-devicons'                                              " Icon Fonts
     Plug 'RRethy/vim-illuminate'                                               " Highlight same stuff
