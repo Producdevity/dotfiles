@@ -84,5 +84,14 @@ reload_ssh() {
   sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
 }
 
+# --------------------------------------------------------------------------
+#  route:  add Google services to use en0 interface to avoid the VPN tunnel
+# --------------------------------------------------------------------------
+route_google_no_vpn() {
+  sudo route add -net 172.217.0.0/16 -interface en0
+  sudo route add -net 172.253.0.0/16 -interface en0
+}
+
+
 echo ".profile loaded"
 
