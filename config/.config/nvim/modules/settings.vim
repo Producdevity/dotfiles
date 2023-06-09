@@ -12,7 +12,8 @@ set nowrap                         " No wrapping please
 set foldmethod=manual              " Foldmethod syntax
 set lazyredraw                     " Redraw less for vroom vroom
 set encoding=utf-8                 " Encoding UTF-8
-set clipboard=unnamed              " Use system clipboar
+" set clipboard=unnamed              " Use system clipboar
+set clipboard^=unnamed,unnamedplus
 set showcmd                        " Display command
 set number                         " Linenumbers
 set relativenumber                 " Relative linenumber
