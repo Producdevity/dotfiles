@@ -47,6 +47,7 @@ cask "sourcetree"
 cask "virtualbox"
 cask "visual-studio-code"
 cask "vscodium"
+cask "zed"
 cask "zulu11"
 
 # Terminal, CLI and Utils
