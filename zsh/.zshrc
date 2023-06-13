@@ -33,8 +33,11 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # values = "random" | "robbyrussell" | "powerlevel9k/powerlevel9k"
+
 ZSH_THEME="gruvbox"
 SOLARIZED_THEME="dark"
+
+export BAT_THEME="Dracula"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -170,7 +173,6 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
-# export BAT_THEME="Dracula"
 
 # Load ZSH Syntac Highlighting at the end
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
