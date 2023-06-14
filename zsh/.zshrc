@@ -8,6 +8,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
+
+
 export PATH=$HOME/bin:$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
 
 # Path to Java JDK
@@ -248,3 +250,7 @@ export PATH="$PNPM_HOME:$PATH"
 
 # ChatGPT OpenAI API KEY
 OPENAI_API_KEY=$(security find-generic-password -a "$USER" -s 'OPENAI_API_KEY' -w)
+
+# Cargo Rust
+. "$HOME/.cargo/env"
+
