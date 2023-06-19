@@ -8,9 +8,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
-
-
-export PATH=$HOME/bin:$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
 
 # Path to Java JDK
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -118,7 +116,6 @@ else
 fi
 
 
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -222,7 +219,7 @@ fi
 # For pkg-config to find zlib you may need to set:
 # export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
-export TERM=xterm-256color
+export TERM=screen-256color
 
 # add pyenv to path
 export PATH="${HOME}/.pyenv/shims:${PATH}"
@@ -240,7 +237,8 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 export NVM_DIR=$HOME/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-echo ".zshrc loaded"
+# NPM global 
+export PATH=~/.npm-global/bin:$PATH
 
 # pnpm
 export PNPM_HOME="/Users/yassine/Library/pnpm"
@@ -248,9 +246,18 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 #
 
-# ChatGPT OpenAI API KEY
-OPENAI_API_KEY=$(security find-generic-password -a "$USER" -s 'OPENAI_API_KEY' -w)
-
 # Cargo Rust
 . "$HOME/.cargo/env"
 
+
+# ChatGPT OpenAI API KEY
+export OPENAI_API_KEY=$(security find-generic-password -a "$USER" -s 'OPENAI_API_KEY' -w)
+
+# 1Password Settings
+export OP_BIOMETRIC_UNLOCK_ENABLED=true
+
+# 1Password Plugins
+source ~/.config/op/plugins.sh
+
+
+echo "✅ .zshrc loaded"
