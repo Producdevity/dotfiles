@@ -282,4 +282,4 @@ alias cleardns="sudo dscacheutil -flushcache "
 #unalias
 # unalias ls
 
-echo ".bash_aliases loaded"
+echo "✅ .bash_aliases loaded"

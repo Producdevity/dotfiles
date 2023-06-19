@@ -93,5 +93,5 @@ route_google_no_vpn() {
 }
 
 
-echo ".profile loaded"
+echo "✅ .profile loaded"
 
