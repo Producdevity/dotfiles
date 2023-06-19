@@ -16,9 +16,12 @@ brew bundle --file="$HOME/.dotfiles/config/Brewfile"
 
 
 # set Git preferences
+echo "Setting Git defaults"
 git config --global user.email "y.gherbi.dev@gmail.com"
 git config --global user.name "Yassine Gherbi"
 git config --global core.editor 'nvim'
+# always use SSH instead of HTTPS for git
+git config --global --add url."git@github.com:".insteadOf "https://github.com/"
 
 # install vim plugins
 echo "Installing nvim plugins"
