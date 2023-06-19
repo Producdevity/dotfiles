@@ -1,0 +1,33 @@
+{
+  "title": "Change caps_lock to Tab and Control",
+  "rules": [
+    {
+      "description": "Post Tab if Caps is tapped, Control if held.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "tab"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

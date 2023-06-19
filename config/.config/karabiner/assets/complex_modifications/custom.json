@@ -1,0 +1,29 @@
+{
+  "title": "Custom modifications",
+  "rules": [
+    {
+      "description": "Toggle AppName visibility",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f1",
+            "modifiers": {
+              "mandatory": ["shift", "control", "option", "command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"System Events\" to set visible of process \"AppName\" to true'"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "shell_command": "osascript -e 'tell application \"System Events\" to set visible of process \"AppName\" to false'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
