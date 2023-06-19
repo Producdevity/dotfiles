@@ -23,3 +23,6 @@ let g:loaded_perl_provider = 0
 
 " Ok, no Ruby
 let g:loaded_ruby_provider = 0
+
+" Snakes like to hide
+let g:python3_host_prog="/usr/local/bin/python3"

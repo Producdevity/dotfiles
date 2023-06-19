@@ -12,8 +12,7 @@ set nowrap                         " No wrapping please
 set foldmethod=manual              " Foldmethod syntax
 set lazyredraw                     " Redraw less for vroom vroom
 set encoding=utf-8                 " Encoding UTF-8
-" set clipboard=unnamed              " Use system clipboar
-set clipboard^=unnamed,unnamedplus
+set clipboard^=unnamed,unnamedplus " Use system clipboar
 set showcmd                        " Display command
 set number                         " Linenumbers
 set relativenumber                 " Relative linenumber
@@ -31,6 +30,7 @@ set signcolumn=auto                " Extra column for indicators (if there are a
 set backspace=2                    " Make backspace delete characters
 set cursorline                     " Highlight current line
 set shortmess+=c                   " Don't pass messages to |ins-completion-menu|.
+set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 
 " Splits
 set splitright
