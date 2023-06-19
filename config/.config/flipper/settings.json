@@ -1,0 +1,25 @@
+{
+  "androidHome": "/Users/yassine/Library/Android/sdk",
+  "enableAndroid": true,
+  "enableIOS": true,
+  "enablePhysicalIOS": true,
+  "enablePrefetching": 2,
+  "idbPath": "/usr/local/bin/idb",
+  "reactNative": {
+    "shortcuts": {
+      "enabled": false,
+      "reload": "Alt+Shift+R",
+      "openDevMenu": "Alt+Shift+D"
+    }
+  },
+  "darkMode": "dark",
+  "showWelcomeAtStartup": true,
+  "suppressPluginErrors": false,
+  "persistDeviceData": false,
+  "enablePluginMarketplace": false,
+  "marketplaceURL": "",
+  "enablePluginMarketplaceAutoUpdate": true,
+  "server": {
+    "enabled": false
+  }
+}
