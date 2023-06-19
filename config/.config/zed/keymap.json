@@ -1,0 +1,22 @@
+[
+  {
+    "bindings": {
+      "alt-j": "pane::ActivatePrevItem",
+      "alt-k": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-m": "editor::MoveToEnclosingBracket",
+      "cmd-_": "editor::Fold",
+      "cmd-+": "editor::UnfoldLines"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-a": "command_palette::Toggle"
+    }
+  }
+]
