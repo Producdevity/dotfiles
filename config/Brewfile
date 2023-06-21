@@ -137,6 +137,7 @@ cask "toggl-track"
 
 # Other
 brew "evolv-escribe-suite"
+brew "koekeishiya/formulae/yabai"
 brew "trash"
 cask "1password"
 cask "ankerwork"
@@ -156,6 +157,7 @@ cask "raspberry-pi-imager"
 cask "setapp"
 cask "sidequest"
 cask "spotify"
+
 
 # Cad & 3D
 cask "ultimaker-cura"
