@@ -137,6 +137,7 @@ cask "toggl-track"
 
 # Other
 brew "evolv-escribe-suite"
+brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 brew "trash"
 cask "1password"
