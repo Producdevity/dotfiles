@@ -279,6 +279,8 @@ alias disablespotlight="sudo mdutil -a -i off "
 
 alias cleardns="sudo dscacheutil -flushcache "
 
+alias bcfuckyoureddit='ffmpeg -filter_complex "nullsrc=s=1920x1080,geq=random(1)*255:128:128[vout]" -map "[vout]" -t 46 -c:v libx264 out.mp4 '
+
 #unalias
 # unalias ls
 
