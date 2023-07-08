@@ -3,6 +3,7 @@
 
 #### TODO
 
+- [ ] Migrate to Lua
 - [ ] check out vim-jsdocs
 - [ ] Replace `tmux-powerline` by `powerline`
 - [ ] Vim motion on speed!
