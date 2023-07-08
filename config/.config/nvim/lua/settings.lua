@@ -57,7 +57,7 @@ vim.o.swapfile = false
 vim.o.backup = false
 
 -- Persistent undo
-vim.o.undodir = '~/.vim/undo/'
+vim.opt.undodir = os.getenv( "HOME" ) .. '/undodir'
 vim.o.undofile = true
 vim.o.undolevels = 1000
 vim.o.undoreload = 10000
