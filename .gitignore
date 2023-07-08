@@ -1,6 +1,10 @@
 .DS_Store
 .idea
 config/.config/nvim/plugged
+config/.config/nvim/vimscript/plugged
+config/.config/nvim/pack
+config/.config/nvim/packer.nvim
+config/.config/nvim/~
 
 .vim/bundle
 .vim/undo
