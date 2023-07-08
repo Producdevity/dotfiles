@@ -1,4 +1,14 @@
 #!/bin/zsh
+echo -e "\e[1;31mMake sure this repo is cloned in ~/.dotfiles\e[0m"
+echo -e "\e[1;31mThis script will overwrite your current dotfiles\e[0m"
+echo "Press any key to continue"
+read -k1 -s
+
+if [ ! -d "$HOME/.dotfiles" ]; then
+  echo -e "\e[1;31mError: This script requires the .dotfiles directory to be located in the home directory.\e[0m"
+  echo -e "\e[1;31mPlease make sure the .dotfiles repository is cloned into $HOME/.dotfiles and try again.\e[0m"
+  exit 1
+fi
 
 # Xcode commandline tools
 echo "Installing xcode commandline tools"
@@ -23,10 +33,22 @@ git config --global core.editor 'nvim'
 # always use SSH instead of HTTPS for git
 git config --global --add url."git@github.com:".insteadOf "https://github.com/"
 
-# install vim plugins
+
+# install nvim package manager
+git clone https://github.com/wbthomason/packer.nvim ~/.config/nvim/packer.nvim
+
+
+# install global node modules
+echo "Installing global node modules"
+cd ~/.dotfiles/node
+npm install
+cd ~/.dotfiles
+
+
+# install nvim plugins
 echo "Installing nvim plugins"
-nvim -c 'PlugInstall' \
-    -c 'qa!'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
 
 # install vim plugins
 echo "Installing vim plugins"
