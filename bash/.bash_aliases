@@ -1,6 +1,7 @@
 alias mvim='mvim -v'
 alias vvim='/usr/bin/vim '
 alias vim='nvim '
+alias nvimold='nvim -u ~/.config/nvim/init.vim '
 
 alias sudo='sudo '
 
@@ -87,6 +88,7 @@ alias brewrc='vim ~/.config/Brewfile'
 alias kittyrc='vim ~/.config/kitty/kitty.conf'
 alias nvimdir='cd ~/.config/nvim'
 alias nvimrc='vim ~/.config/nvim/init.vim'
+alias nvimlua='vim ~/.config/nvim/init.lua'
 alias tmuxls='tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}'
 alias tmuxrc='vim ~/.tmux.conf'
 alias v='vim .'
@@ -157,6 +159,8 @@ alias y='yarn'
 alias ys='y start'
 alias ya='y add'
 alias yga='y global add'
+
+alias lslock='ll | grep "lock"'
 
 # Update package managers
 alias updateyarn='curl --compressed -o- -L https://yarnpkg.com/install.sh | bash '
