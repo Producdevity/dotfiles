@@ -70,6 +70,7 @@ brew "reattach-to-user-namespace"
 brew "ripgrep"
 brew "stow"
 brew "svn"
+brew "tldr"
 brew "tmux"
 brew "tree"
 brew "wget"
@@ -118,6 +119,7 @@ cask "font-iosevka"
 cask "font-jetbrains-mono"
 cask "font-juliamono"
 cask "font-source-code-pro"
+cask "font-ubuntu"
 
 
 # Keyboard stuff
@@ -159,7 +161,6 @@ cask "raspberry-pi-imager"
 cask "setapp"
 cask "sidequest"
 cask "spotify"
-
 
 # Cad & 3D
 cask "ultimaker-cura"
