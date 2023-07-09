@@ -144,8 +144,12 @@ bindkey '^[[Z' reverse-menu-complete
 # Use Cmd-l to clear the screen (iTerm map)
 bindkey '^[clear' clear-screen
 
+# NVim Packer location for Packages
+export PACKER_PATH="$HOME/.local/share/nvim/site/pack/packer/start"
+
 # NVim Gruvbox Theme
-source "$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh"
+source "$PACKER_PATH/gruvbox/gruvbox_256palette_osx.sh"
+
 
 # Make all GNU flavor commands available, may override same-name BSD flavor commands
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
