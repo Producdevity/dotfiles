@@ -40,9 +40,7 @@ git clone https://github.com/wbthomason/packer.nvim ~/.config/nvim/packer.nvim
 
 # install global node modules
 echo "Installing global node modules"
-cd ~/.dotfiles/node
-npm install
-cd ~/.dotfiles
+~/.dotfiles/node/install-global-packages.sh
 
 
 # install nvim plugins
