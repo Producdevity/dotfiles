@@ -57,14 +57,25 @@ vim.o.swapfile = false
 vim.o.backup = false
 
 -- Persistent undo
-vim.opt.undodir = os.getenv( "HOME" ) .. '/undodir'
+vim.opt.undodir = os.getenv( "HOME" ) .. '/.config/nvim/.undo//'
 vim.o.undofile = true
 vim.o.undolevels = 1000
 vim.o.undoreload = 10000
 
 -- Clipboard
 if os.getenv('TMUX') == nil then
-  vim.opt.clipboard:append(",unnamed")
+  local clipboard_values = vim.opt.clipboard:get()
+  local hasUnnamed = false
+  for _, value in ipairs(clipboard_values) do
+    if value == "unnamed" then
+      hasUnnamed = true
+      break
+    end
+  end
+  if not hasUnnamed then
+    clipboard_values[#clipboard_values + 1] = "unnamed"
+    vim.opt.clipboard = clipboard_values
+  end
 end
 
 -- Shell
