@@ -1,0 +1,26 @@
+{
+  "title": "Disable Alt/Option + Key",
+  "rules": [
+    {
+      "description": "Disable Option + L",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "optional": ["any"],
+              "mandatory": ["left_option"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
