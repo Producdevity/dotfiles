@@ -126,6 +126,7 @@ cask "font-ubuntu"
 brew "qmk/qmk/qmk"
 cask "karabiner-elements"
 cask "qmk-toolbox"
+cask "ukelele"
 cask "via"
 cask "vial"
 
