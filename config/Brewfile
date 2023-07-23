@@ -160,7 +160,6 @@ cask "obs"
 cask "rar"
 cask "raspberry-pi-imager"
 cask "setapp"
-cask "shortcutdetective"
 cask "sidequest"
 cask "spotify"
 
