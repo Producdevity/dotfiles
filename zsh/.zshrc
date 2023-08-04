@@ -25,9 +25,11 @@ export HOMEBREW_BUNDLE_FILE=$HOME/.dotfiles/config/Brewfile
 export NODE_PATH='/usr/local/lib/node_modules'
 
 # Path to Android SDK
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android
+export ANDROID_SDK_ROOT=$ANDROID_HOME/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin/
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
