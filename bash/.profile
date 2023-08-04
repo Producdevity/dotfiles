@@ -93,5 +93,15 @@ route_google_no_vpn() {
 }
 
 
+# --------------------------------------------------------------------------
+#  @param port: the port of the process you want to DIE
+#  @example: killport 8081
+# --------------------------------------------------------------------------
+killport() {
+  lsof -i tcp:"$1" | awk 'NR!=1 {print $2}' | xargs kill -9
+}
+
+
+
 echo "✅ .profile loaded"
 
