@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>SignatureIsRich</key>
+		<false/>
+		<key>SignatureName</key>
+		<string>Yassine@hexelnet.com</string>
+		<key>SignatureUniqueId</key>
+		<string>CE930412-43DD-47AC-9A68-2F0F58BB6819</string>
+	</dict>
+	<dict>
+		<key>SignatureIsRich</key>
+		<false/>
+		<key>SignatureName</key>
+		<string>Hexelnet Team</string>
+		<key>SignatureUniqueId</key>
+		<string>19824C2B-E799-46A6-A387-2976E875948B</string>
+	</dict>
+</array>
+</plist>
