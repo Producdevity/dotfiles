@@ -21,7 +21,6 @@ brew "nvm"
 brew "openjdk@11"
 brew "php"
 brew "python"
-cask "julia"
 
 # Dev Tools
 brew "android-platform-tools"
@@ -140,6 +139,7 @@ cask "cheatsheet"
 cask "rectangle"
 cask "todoist"
 cask "toggl-track"
+cask "customshortcuts"
 
 # Other
 brew "evolv-escribe-suite"
