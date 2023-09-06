@@ -162,7 +162,6 @@ cask "obs"
 cask "rar"
 cask "raspberry-pi-imager"
 cask "setapp"
-cask "sidequest"
 cask "spotify"
 
 # Cad & 3D
