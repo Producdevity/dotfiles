@@ -43,6 +43,7 @@ alias vapesites='vim ~/Coding/personal/2022/yes-i-am-old-enough/Website/sites.tx
 
 #Laravel
 alias phpunit='vendor/bin/phpunit '
+alias laraclearcache='php artisan cache:clear && php artisan config:clear && php artisan config:cache'
 alias larafresh='composer dump-autoload && php artisan cache:clear && php artisan clear-compiled && php artisan optimize && php artisan migrate:refresh --seed'
 alias laraquick='composer dump-autoload && php artisan cache:clear && php artisan clear-compiled' #Same as above except without the db refresh
 alias larafull='rm -rf vendor && rm -rf node_modules && composer install && npm install && bower install && gulp && php artisan clear-compiled && php artisan optimize && php artisan migrate:refresh --seed'
@@ -253,6 +254,8 @@ alias blackslack="sudo ~/Coding/personal/2018/WorkFlow/SH/darkify_slack.sh"
 alias copyssh='cat ~/.ssh/id_rsa.pub | pbcopy'
 alias copysshed='cat ~/.ssh/id_ed25519.pub | pbcopy'
 alias reloadssh='sudo launchctl start com.openssh.sshd '
+
+alias reloadsshd='sudo launchctl bootout system /System/Library/LaunchDaemons/ssh.plist && sudo launchctl bootstrap system /System/Library/LaunchDaemons/ssh.plist'
 
 
 #Postgresql
