@@ -50,8 +50,17 @@ vim.api.nvim_set_keymap('n', '<C-h>', '<C-W><C-H>', {})
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-W><C-J>', {})
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-W><C-K>', {})
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-W><C-L>', {})
--- Duplicate line
-vim.api.nvim_set_keymap('n', '∂', 'yyp', {})
+
+-- Set key bindings for duplicating lines in normal and visual modes.
+vim.api.nvim_set_keymap('n', '<leader>d', 'yyp', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<leader>d', 'yP', { noremap = true, silent = true })
+
+-- Set key bindings for duplicating lines in normal and visual modes.
+-- vim.api.nvim_set_keymap('n', '<leader>d', ':let @x=@"<CR>:normal! "xP<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('v', '<leader>d', ':let @x=@"<CR>:normal! gv"xp<CR>', { noremap = true, silent = true })
+
+-- Split line at cursor and return to normal mode
+vim.api.nvim_set_keymap('n', 'K', 'i<CR><Esc>', { noremap = true, silent = true })
 -- Quickly edit/reload the vimrc file
 vim.api.nvim_set_keymap('n', '<leader>ec', ':e $MYVIMRC<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>sc', ':so $MYVIMRC<CR>:echo "Reloaded Config"<CR>', {})
