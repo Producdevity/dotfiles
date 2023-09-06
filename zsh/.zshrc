@@ -13,6 +13,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.composer/vendor/bin
 # Path to Java JDK
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export PATH="~/Library/Java/JavaVirtualMachines/azul-18.0.2.1:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/yassine/.oh-my-zsh
