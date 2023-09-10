@@ -26,6 +26,7 @@ return require('packer').startup(function()
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'ryanoasis/vim-devicons'
   use 'RRethy/vim-illuminate'
+  use 'chrisbra/Colorizer' -- Colorize hex codes
 
   -- Functionality
   use {'neoclide/coc.nvim', branch = 'release'}
