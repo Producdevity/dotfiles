@@ -10,6 +10,8 @@ if [ ! -d "$HOME/.dotfiles" ]; then
   exit 1
 fi
 
+# TODO: symlink all dotfiles to home directory that we need
+
 # Xcode commandline tools
 echo "Installing xcode commandline tools"
 xcode-select --install
@@ -36,6 +38,10 @@ git config --global --add url."git@github.com:".insteadOf "https://github.com/"
 
 # install nvim package manager
 git clone https://github.com/wbthomason/packer.nvim ~/.config/nvim/packer.nvim
+
+# install nvm
+echo "Installing nvm"
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 
 # install global node modules
