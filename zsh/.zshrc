@@ -187,7 +187,6 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=$(brew --prefix)/share/zsh-syntax-highligh
 # Path to Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
 
 # initialize rbenv if available
@@ -238,23 +237,16 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-
-# NVM, Wants to be at the bottom like every god damn package (oh, this one really should be at the bottom...)
-export NVM_DIR=$HOME/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# NPM global 
+# NPM global
 export PATH=~/.npm-global/bin:$PATH
 
 # pnpm
 export PNPM_HOME="/Users/yassine/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
-#
 
 # Cargo Rust
 . "$HOME/.cargo/env"
-
 
 # ChatGPT OpenAI API KEY
 export OPENAI_API_KEY=$(security find-generic-password -a "$USER" -s 'OPENAI_API_KEY' -w)
@@ -265,5 +257,9 @@ export OP_BIOMETRIC_UNLOCK_ENABLED=true
 # 1Password Plugins
 source ~/.config/op/plugins.sh
 
+# Load NVM (LEAVE THIS AT THE BOTTOM)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 echo "✅ .zshrc loaded"
