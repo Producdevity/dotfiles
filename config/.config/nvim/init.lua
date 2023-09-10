@@ -1,10 +1,10 @@
 -- Activate Modules
+require('theme')
 require('plugins')
 require('functions')
 require('filetypes')
 require('settings')
 require('mappings')
-require('theme')
 require('autocmds')
 
 -- Plugin Settings
