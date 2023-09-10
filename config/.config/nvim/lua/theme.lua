@@ -1,7 +1,4 @@
--- If you have vim >=8.0 or Neovim >= 0.1.5
-if vim.o.termguicolors then
-  vim.o.termguicolors = true
-end
+vim.opt.termguicolors = true
 
 -- Theme
 vim.cmd [[syntax enable]]
