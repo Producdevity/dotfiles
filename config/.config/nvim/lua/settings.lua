@@ -90,8 +90,3 @@ end
 
 -- Regexpengine
 vim.o.regexpengine = 1
-
--- Cursor shape TODO: Check which one to use
--- os.setenv('NVIM_TUI_ENABLE_CURSOR_SHAPE', '1')
-vim.fn.setenv('NVIM_TUI_ENABLE_CURSOR_SHAPE', '1')
-
