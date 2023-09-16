@@ -128,8 +128,9 @@ alias gitd='gitdf '
 alias gitda='gitdf add'
 alias gitds='gitdf status'
 alias gitdd='gitdf diff'
-alias gitdc='gitdf commit -m'
-alias dotfiles='cd $HOME/.dotfiles'
+alias gitdc='gitdf commit -m '
+alias dotfiles='cd $HOME/.dotfiles '
+alias dot='cd $HOME/.dotfiles '
 
 # Git rebase
 alias grf='git fetch && git rebase origin/master'
