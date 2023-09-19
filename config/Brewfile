@@ -172,6 +172,7 @@ cask "kicad"
 cask "lycheeslicer"
 
 # Mac App Store
+mac "Blackmagic Disk Speed Test", id: 425264550
 mas "Backtrack", id: 1477089520
 mas "Brother P-touch Editor", id: 1453365242
 mas "iTranslate", id: 884952790
