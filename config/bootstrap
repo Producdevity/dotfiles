@@ -36,7 +36,13 @@ git config --global core.editor 'nvim'
 git config --global --add url."git@github.com:".insteadOf "https://github.com/"
 
 
+# install TMUX Plugin Manager - TPM
+echo "Installing TMUX Plugin Manager - TPM"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+
 # install nvim package manager
+echo "Installing nvim package manager"
 git clone https://github.com/wbthomason/packer.nvim ~/.config/nvim/packer.nvim
 
 # install nvm
