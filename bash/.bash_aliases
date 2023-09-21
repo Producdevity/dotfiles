@@ -276,8 +276,9 @@ alias removeItermFromDock="/usr/libexec/PlistBuddy -c 'Add :LSUIElement bool tru
 # restore
 alias restoreItermToDock="/usr/libexec/PlistBuddy -c 'Delete :LSUIElement' /Applications/iTerm 2.app/Contents/Info.plist "
 
-# KPN
-#alias killdefender="launchctl unload /Library/LaunchAgents/com.microsoft.wdav.tray.plist"
+# LaunchControl
+alias unloaditunes="launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist"
+alias loaditunes="launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plis"
 alias killdefender="launchctl bootout /Library/LaunchAgents/com.microsoft.wdav.tray.plist"
 alias startdefender="launchctl load /Library/LaunchAgents/com.microsoft.wdav.tray.plist"
 
