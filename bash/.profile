@@ -102,6 +102,13 @@ killport() {
 }
 
 
+# --------------------------------------------------------------------------
+#  react native: watchman stupid workaround
+# --------------------------------------------------------------------------
+rewatchman() {
+  watchman watch-del "$(pwd)" ; watchman watch-project "$(pwd)"
+}
+
 
 echo "✅ .profile loaded"
 
