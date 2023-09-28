@@ -164,6 +164,7 @@ cask "rar"
 cask "raspberry-pi-imager"
 cask "setapp"
 cask "spotify"
+cask "streamlabs"
 
 # Cad & 3D
 cask "ultimaker-cura"
