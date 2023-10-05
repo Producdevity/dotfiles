@@ -1,23 +1,17 @@
 # This is Git's per-user configuration file.
 #
 [core]
+	attributesfile = /Users/yassine/.gitattributes
 	autocrlf = input
+	editor = nvim
 	excludesfile = /Users/yassine/.gitignore_global
-	editor = vim
 [user]
 	name = Yassine Gherbi
 	email = yassine@hexelnet.com
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-# [alias]
-	# log aliases (DOESNT WORK FOR NOW)
-	# head = "simple_git_head" -1
-	# slog = "simple_git_log" -15
+[alias]
+	count-lines = "! git log --author=\"$1\" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\\n\", add, subs, loc }' #"
+# git pull defaults to git pull ,like it should. come at me bro
+[pull]
+	rebase = false
 [init]
-	defaultBranch = master
-[commit]
-	template = /Users/yassine/.stCommitMsg
+	defaultBranch = main
