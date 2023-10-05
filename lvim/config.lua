@@ -4,3 +4,7 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 reload('../config/.config/nvim/lua/mappings.lua')
+
+
+
+
