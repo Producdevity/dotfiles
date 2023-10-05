@@ -10,7 +10,32 @@ if [ ! -d "$HOME/.dotfiles" ]; then
   exit 1
 fi
 
-# TODO: symlink all dotfiles to home directory that we need
+# TODO: Test is created symlinks are actually working
+
+DOTFILES_DIR="$HOME/.dotfiles"
+
+# Create symlinks function
+create_symlink() {
+  ln -s "$DOTFILES_DIR/$1" "$HOME/$2"
+}
+
+
+# Create symlinks
+create_symlink .vim/.vimrc .vimrc
+create_symlink bash/.bash_aliases .bash_aliases
+create_symlink bash/.profile .profile
+create_symlink general/.skhdrc .skhdrc
+create_symlink general/.yabairc .yabairc
+create_symlink git/.gitattributes .gitattributes
+create_symlink git/.gitconfig .gitconfig
+create_symlink git/.gitignore_global .gitignore_global
+create_symlink tmux/.tmux-powerlinerc .tmux-powerlinerc
+create_symlink tmux/.tmux.conf .tmux.conf
+create_symlink vim/.ideavimrc .ideavimrc
+create_symlink zsh/.zshrc .zshrc
+
+echo "All symlinks created successfully!"
+
 
 # Xcode commandline tools
 echo "Installing xcode commandline tools"
@@ -32,8 +57,7 @@ echo "Setting Git defaults"
 git config --global user.email "y.gherbi.dev@gmail.com"
 git config --global user.name "Yassine Gherbi"
 git config --global core.editor 'nvim'
-# always use SSH instead of HTTPS for git
-git config --global --add url."git@github.com:".insteadOf "https://github.com/"
+
 
 
 # install TMUX Plugin Manager - TPM
@@ -63,4 +87,4 @@ nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 # install vim plugins
 echo "Installing vim plugins"
 vim -c 'PlugInstall' \
-    -c 'qa!'
+  -c 'qa!'
