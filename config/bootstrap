@@ -1,55 +1,85 @@
 #!/bin/zsh
-echo -e "\e[1;31mMake sure this repo is cloned in ~/.dotfiles\e[0m"
-echo -e "\e[1;31mThis script will overwrite your current dotfiles\e[0m"
-echo "Press any key to continue"
-read -k1 -s
 
-if [ ! -d "$HOME/.dotfiles" ]; then
-  echo -e "\e[1;31mError: This script requires the .dotfiles directory to be located in the home directory.\e[0m"
-  echo -e "\e[1;31mPlease make sure the .dotfiles repository is cloned into $HOME/.dotfiles and try again.\e[0m"
-  exit 1
-fi
+# Description: Script to set up dotfiles and install various utilities.
 
 # TODO: Test is created symlinks are actually working
 
+
+# Variables
 DOTFILES_DIR="$HOME/.dotfiles"
 
-# Create symlinks function
+
+# Functions
+check_command_existence() {
+  if ! command -v "$1" &>/dev/null; then
+    echo "Error: $1 is not installed."
+    exit 1
+  fi
+}
+
 create_symlink() {
   ln -s "$DOTFILES_DIR/$1" "$HOME/$2"
 }
 
+install_brew() {
+  if ! command -v brew &>/dev/null; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    echo "Brew already installed. Skipping."
+  fi
+}
+
+# Main script executio
+echo -e "\e[1;31mMake sure this repo is cloned in ~/.dotfiles\e[0m"
+echo -e "\e[1;31mThis script will overwrite your current dotfiles\e[0m"
+read -rp "Do you want to continue? (y/n): " choice
+if [[ "$choice" != "y" ]]; then
+    echo "Operation aborted."
+    exit 1
+fi
+
+
+# Check for required commands
+check_command_existence git
+check_command_existence wget
+
+if [ ! -d "$DOTFILES_DIR" ]; then
+  echo -e "\e[1;31mError: .dotfiles directory not found in home directory.\e[0m"
+  echo -e "\e[1;31mPlease make sure the .dotfiles repository is cloned into $HOME/.dotfiles and try again.\e[0m"
+  exit 1
+fi
 
 # Create symlinks
+echo "Creating symlinks"
 create_symlink .vim/.vimrc .vimrc
 create_symlink bash/.bash_aliases .bash_aliases
 create_symlink bash/.profile .profile
+create_symlink config/.config/flipper .config/flipper
+create_symlink config/.config/kitty .config/kitty
+create_symlink config/.config/nvim .config/nvim
+create_symlink config/.config/via .config/via
+create_symlink config/.config/zed .config/zed
+create_symlink config/Brewfile .config/Brewfile
 create_symlink general/.skhdrc .skhdrc
 create_symlink general/.yabairc .yabairc
 create_symlink git/.gitattributes .gitattributes
 create_symlink git/.gitconfig .gitconfig
 create_symlink git/.gitignore_global .gitignore_global
+create_symlink lvim .config/lvim
 create_symlink tmux/.tmux-powerlinerc .tmux-powerlinerc
 create_symlink tmux/.tmux.conf .tmux.conf
 create_symlink vim/.ideavimrc .ideavimrc
 create_symlink zsh/.zshrc .zshrc
 
-echo "All symlinks created successfully!"
-
-
-# Xcode commandline tools
-echo "Installing xcode commandline tools"
-xcode-select --install
-
+check_command_existence git
 
 # Homebrew
-echo "Installing brew"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+install_brew()
 
 
-# Install homebrew formulae and casks
+# Install brew formulae and casks
 echo "Installing brew formulae and casks"
-brew bundle --file="$HOME/.dotfiles/config/Brewfile"
+brew bundle --file="$DOTFILES_DIR/config/Brewfile"
 
 
 # set Git preferences
@@ -57,7 +87,6 @@ echo "Setting Git defaults"
 git config --global user.email "y.gherbi.dev@gmail.com"
 git config --global user.name "Yassine Gherbi"
 git config --global core.editor 'nvim'
-
 
 
 # install TMUX Plugin Manager - TPM
@@ -68,6 +97,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # install nvim package manager
 echo "Installing nvim package manager"
 git clone https://github.com/wbthomason/packer.nvim ~/.config/nvim/packer.nvim
+
 
 # install nvm
 echo "Installing nvm"
@@ -82,6 +112,7 @@ echo "Installing global node modules"
 # install nvim plugins
 echo "Installing nvim plugins"
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+# TODO: add CoC/LSP install command
 
 
 # install vim plugins
