@@ -12,6 +12,7 @@ yarn_packages=(
 )
 
 pnpm_packages=(
+  "expo-cli"
   "eas-cli"
   "neovim"
 )
