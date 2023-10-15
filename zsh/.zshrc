@@ -11,7 +11,8 @@ fi
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
 
 # Path to Java JDK
-export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(readlink -f $(which java))
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 export PATH="~/Library/Java/JavaVirtualMachines/azul-18.0.2.1:$PATH"
 
