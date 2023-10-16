@@ -12,6 +12,7 @@ yarn_packages=(
 )
 
 pnpm_packages=(
+  "vercel"
   "eas-cli"
   "neovim"
 )
