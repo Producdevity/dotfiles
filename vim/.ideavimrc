@@ -64,7 +64,7 @@ nmap <leader>w :w<CR>
 nmap <leader>wa :wa<CR>
 
 " go to end of line and delete char <C-l>
-noremap <C-l> <Esc>$x<Esc>
+" noremap <C-l> <Esc>$x<Esc>
 
 " refresh .ideavimrc source ~/.ideavimrc
 nmap <silent> <leader>sv :source ~/.ideavimrc<CR>
