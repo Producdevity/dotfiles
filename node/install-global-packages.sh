@@ -12,6 +12,7 @@ yarn_packages=(
 )
 
 pnpm_packages=(
+  "turbo"
   "vercel"
   "eas-cli"
   "neovim"
