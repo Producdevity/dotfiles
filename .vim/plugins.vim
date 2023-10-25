@@ -19,16 +19,17 @@ Plugin 'honza/vim-snippets'
 Plugin 'benekastah/neomake'
 
 " Editing files
-Plugin 'mattn/emmet-vim'           " Vim emmet
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-surround'        " Change easy surroundings
-Plugin 'tpope/vim-repeat'          " Better dot repeat
-Plugin 'tComment'                  " Easy commenting
 Plugin 'Raimondi/delimitMate'      " Auto closing quotes, parenthesis, etc
 Plugin 'Valloric/YouCompleteMe'    " Autocompleter
-Plugin 'wakatime/vim-wakatime'     " Wakatime time tracker
-Plugin 'terryma/vim-expand-region' " Expand selection
+Plugin 'github/copilot'            " AI
 Plugin 'gregsexton/MatchTag'       " Html highlight MatchTag
+Plugin 'mattn/emmet-vim'           " Vim emmet
+Plugin 'tComment'                  " Easy commenting
+Plugin 'terryma/vim-expand-region' " Expand selection
+Plugin 'tpope/vim-repeat'          " Better dot repeat
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'        " Change easy surroundings
+Plugin 'wakatime/vim-wakatime'     " Wakatime time tracker
 
 " Git
 Plugin 'tpope/vim-fugitive'
