@@ -65,6 +65,7 @@ brew "idb-companion"
 brew "iproute2mac"
 brew "jq"
 brew "lolcat"
+brew "lsusb"
 brew "mas"
 brew "p7zip"
 brew "rar"
@@ -84,7 +85,6 @@ cask "1password-cli"
 cask "alacritty"
 cask "iterm2"
 cask "kitty"
-cask "phoenix"
 
 
 # Web Tools
