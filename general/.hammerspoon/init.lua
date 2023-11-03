@@ -1,6 +1,6 @@
 local spaces = require("hs.spaces") -- https://github.com/asmagill/hs._asm.spaces
 
--- Switch kitty
+-- Start Switch kitty --
 hs.hotkey.bind({'option'}, 'space', function ()  -- hotkey config
   local BUNDLE_ID = 'net.kovidgoyal.kitty' -- more accurate to avoid mismatching on browser titles
 
@@ -55,3 +55,23 @@ hs.hotkey.bind({'option'}, 'space', function ()  -- hotkey config
     end
   end
 end)
+-- End Switch kitty --
+
+-- Start Immersed Launcher --
+usbWatcher = nil
+appName = "Immersed"
+-- Open and Close when Quest headset is commected and disconnected
+function usbDeviceCallback(data)
+  if (data["productName"] == "Quest 3" or data["productName"] == "Quest Pro") then
+    if (data["eventType"] == "added") then
+      hs.application.launchOrFocus(appName)
+    elseif (data["eventType"] == "removed") then
+      app = hs.appfinder.appFromName(appName)
+      app:kill()
+    end
+  end
+end
+
+usbWatcher = hs.usb.watcher.new(usbDeviceCallback)
+usbWatcher:start()
+-- End Immersed Launcher --
