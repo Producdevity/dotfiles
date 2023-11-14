@@ -69,6 +69,7 @@ create_symlink lvim .config/lvim
 create_symlink tmux/.tmux-powerlinerc .tmux-powerlinerc
 create_symlink tmux/.tmux.conf .tmux.conf
 create_symlink vim/.ideavimrc .ideavimrc
+create_symlink zsh/.zprofile .zprofile
 create_symlink zsh/.zshrc .zshrc
 
 check_command_existence git
