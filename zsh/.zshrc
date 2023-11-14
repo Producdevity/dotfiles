@@ -69,6 +69,9 @@ unsetopt correct
 setopt nocorrectall
 setopt correct
 
+# Prevent sharing history between panes/windows in tmux
+unsetopt sharehistory
+
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
