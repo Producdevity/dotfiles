@@ -230,8 +230,9 @@ fi
 
 export TERM=screen-256color
 
-# add pyenv to path
+# init pyenv
 export PATH="${HOME}/.pyenv/shims:${PATH}"
+eval "$(pyenv init -)"
 
 # Load powerlevel10k theme
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
