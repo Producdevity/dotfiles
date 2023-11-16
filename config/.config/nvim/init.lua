@@ -23,5 +23,7 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
 
 -- Snakes like to hide
-vim.g.python3_host_prog = "/usr/local/bin/python3"
+vim.g.python3_host_prog = "~/.pyenv/shims/python"
+
+
 
