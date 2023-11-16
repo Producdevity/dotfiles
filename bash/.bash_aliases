@@ -48,6 +48,8 @@ alias larafresh='composer dump-autoload && php artisan cache:clear && php artisa
 alias laraquick='composer dump-autoload && php artisan cache:clear && php artisan clear-compiled' #Same as above except without the db refresh
 alias larafull='rm -rf vendor && rm -rf node_modules && composer install && npm install && bower install && gulp && php artisan clear-compiled && php artisan optimize && php artisan migrate:refresh --seed'
 
+alias nrcvpn='sshuttle -x jump.nrc.nl -r nrc@jump.nrc.nl 46.22.0.0/16 ci.nrc.nl woodpecker.nrc.nl'
+
 # PHP
 # ARTISAN
 alias pa='php artisan'
@@ -138,7 +140,7 @@ alias grp='git push --force-with-lease'
 alias ggrpush='ggpush --force-with-lease'
 
 # Python
-alias python='python3 '
+# alias python='python3 '
 alias pip='pip3 '
 
 #Node
@@ -267,7 +269,12 @@ alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.
 
 #mysql
 alias my='mycli -u root -p root '
-alias startmysql='/Applications/MAMP/bin/startMysql.sh '
+alias mysqlroot='mysql -u root -p '
+# alias colormysql=$(echo -e 'mysql --prompt="\001\x1B[31m\002\\u\001\x1B[34m\002@\001\x1B[32m\002\\h\001\x1B[0m\002:\001\x1B[36m\002\\d>\001\x1B[0m\002 "')
+# alias colormysql='mysql -u root -p --prompt="\001\x1B[31m\002\\u\001\x1B[34m\002@\001\x1B[32m\002\\h\001\x1B[0m\002:\001\x1B[36m\002\\d>\001\x1B[0m\002 "'
+# alias colormysql='mysql -u root -p --prompt="\033[31m\u\033[34m@\033[32m\h\033[0m:\033[36m\d>\033[0m "'
+MYSQL_PS1="\033[31m\u\033[34m@\033[32m\h\033[0m:\033[36m\d>\033[0m "
+alias colormysql='mysql -u root -p --prompt="$MYSQL_PS1"'
 
 #iterm
 # remove
