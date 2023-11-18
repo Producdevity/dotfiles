@@ -48,7 +48,8 @@ alias larafresh='composer dump-autoload && php artisan cache:clear && php artisa
 alias laraquick='composer dump-autoload && php artisan cache:clear && php artisan clear-compiled' #Same as above except without the db refresh
 alias larafull='rm -rf vendor && rm -rf node_modules && composer install && npm install && bower install && gulp && php artisan clear-compiled && php artisan optimize && php artisan migrate:refresh --seed'
 
-alias nrcvpn='sshuttle -x jump.nrc.nl -r nrc@jump.nrc.nl 46.22.0.0/16 ci.nrc.nl woodpecker.nrc.nl'
+# alias nrcvpn='sshuttle -x jump.nrc.nl -r nrc@jump.nrc.nl 46.22.0.0/16 ci.nrc.nl woodpecker.nrc.nl'
+alias nrcvpn='sshuttle -x jump.nrc.nl -r jump.nrc.nl 46.22.0.0/16 ci.nrc.nl woodpecker.nrc.nl'
 
 # PHP
 # ARTISAN
