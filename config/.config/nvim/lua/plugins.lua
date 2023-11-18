@@ -5,11 +5,11 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use 'neovim/nvim-lspconfig'
-  use 'nvim-lua/lsp-status.nvim'
-
-  -- The use function serves the same role as Plug in vim-plug
-  use 'wakatime/vim-wakatime'
+  	-- LSP
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
+  use "neovim/nvim-lspconfig"
+  -- use 'nvim-lua/lsp-status.nvim'
 
   -- Editing files
   use 'tpope/vim-surround'
@@ -28,11 +28,12 @@ return require('packer').startup(function()
   use 'RRethy/vim-illuminate'
   use 'chrisbra/Colorizer' -- Colorize hex codes
 
-  -- Functionality
+  -- IDE
   use {'neoclide/coc.nvim', branch = 'release'}
   use 'kevinoid/vim-jsonc'
   use 'junegunn/fzf.vim'
   use { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end }
+
 
   -- JS/TS
   use 'pangloss/vim-javascript'
@@ -40,6 +41,7 @@ return require('packer').startup(function()
   use 'maxmellon/vim-jsx-pretty'
   use 'mattn/emmet-vim'
 
-  -- Other languages and stuff
-  use 'williamboman/mason.nvim'
+  -- Behind the scenes
+  use 'wakatime/vim-wakatime'
+
 end)
