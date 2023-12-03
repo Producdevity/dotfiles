@@ -66,6 +66,8 @@ alias pas='php artisan serve'
 alias pagu='pas & guw'
 alias panw='pas & nrw'
 
+alias cdArcExtensions="cd ~/Library/Application\ Support/Arc/User\ Data/Default/Extensions"
+
 #Symfony
 alias systop='php bin/console server:stop '
 alias systart='php bin/console server:start '
@@ -112,6 +114,9 @@ alias ga='git add '
 alias gb='git branch'
 alias gc='git commit -m'
 alias gch='git checkout'
+unalias gcl
+alias gcl='git clone '
+alias gclrs='git clone --recurse-submodules '
 alias gd='git diff'
 alias glg1="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all "
 alias glg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all "
