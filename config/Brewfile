@@ -92,7 +92,6 @@ brew "httpie"
 cask "arc"
 cask "google-chrome"
 cask "google-chrome-canary"
-cask "microsoft-edge"
 cask "ngrok"
 cask "postman"
 cask "tor-browser"
@@ -107,7 +106,6 @@ cask "dropbox"
 
 # Communication Apps
 cask "discord"
-cask "microsoft-teams"
 cask "slack"
 cask "whatsapp"
 
