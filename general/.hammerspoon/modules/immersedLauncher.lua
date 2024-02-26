@@ -6,7 +6,7 @@ function usbDeviceCallback(data)
   if (data["productName"] == "Quest 3" or data["productName"] == "Quest Pro") then
     if (data["eventType"] == "added") then
       hs.application.launchOrFocus(appName)
-    elseif (data["eventType"] == "removed") then
+    elseif (data["eventType"]k == "removed") then
       app = hs.appfinder.appFromName(appName)
       app:kill()
     end
